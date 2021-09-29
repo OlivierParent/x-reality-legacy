@@ -1,12 +1,12 @@
 {
-  "name": "xr",
-  "version": "0.1.0",
+  "name": "x-reality",
+  "version": "2.0.0",
   "private": true,
-  "module": true,
+  "author": "Olivier Parent",
   "dependencies": {
     "@react-spring/three": "^9.2.4",
     "@react-three/cannon": "^3.1.2",
-    "@react-three/drei": "^7.12.4",
+    "@react-three/drei": "^7.12.5",
     "@react-three/fiber": "^7.0.7",
     "@react-three/flex": "^0.7.0",
     "@react-three/test-renderer": "^7.0.7",
@@ -50,5 +50,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://olivierparent.be"
+  "proxy": "https://olivierparent.be",
+  "homepage": "/x-reality"
 }
