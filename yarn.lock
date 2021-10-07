@@ -1679,63 +1679,63 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
-"@react-spring/animated@~9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.2.3.tgz#271226099d356b7b6d99240375dd8f62f450e997"
-  integrity sha512-xxYOxxrk4r+yy218lVnkR027GXGvHcadDnnXRW0l6atcL+1AGYwimMwIuvzlvnsVnyoK0YUABEeGjk9ENOrVMQ==
+"@react-spring/animated@~9.2.6-beta.0":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.2.6.tgz#58f30fb75d8bfb7ccbc156cfd6b974a8f3dfd54e"
+  integrity sha512-xjL6nmixYNDvnpTs1FFMsMfSC0tURwPCU3b2jWNriYGLfwZ7c/TcyaEZA7yiNnmdFnuR3f3Z27AqIgaFC083Cw==
   dependencies:
-    "@react-spring/shared" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
+    "@react-spring/shared" "~9.2.6-beta.0"
+    "@react-spring/types" "~9.2.6-beta.0"
 
-"@react-spring/core@~9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.2.3.tgz#b3926ef8f2694bfb251318d7b44abac1fa5321d0"
-  integrity sha512-8qJbj0xjjoYGVqdmNd2bVaFzKSAwrMVLweHkaYJiTY6p0g7LhSdt5KSl1MjYA4Rj6S4wO1KgefAPK6mH6MtGtA==
+"@react-spring/core@~9.2.6-beta.0":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.2.6.tgz#ae22338fe55d070caf03abb4293b5519ba620d93"
+  integrity sha512-uPHUxmu+w6mHJrfQTMtmGJ8iZEwiVxz9kH7dRyk69bkZJt9z+w0Oj3UF4J3VcECZsbm3HRhN2ogXSAaqGjwhQw==
   dependencies:
-    "@react-spring/animated" "~9.2.0"
-    "@react-spring/shared" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
+    "@react-spring/animated" "~9.2.6-beta.0"
+    "@react-spring/shared" "~9.2.6-beta.0"
+    "@react-spring/types" "~9.2.6-beta.0"
 
-"@react-spring/rafz@~9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.2.3.tgz#ffde337240b6880a2488d3ca67e4b01688881793"
-  integrity sha512-ThBI3HWp1Y82uRSFVpoykwgM3M9s3SJD6ilKKp9C2OTPcGhWiRGt1IMjzKPwB+F1NX3psbPTt30Bev8WzA/DQQ==
+"@react-spring/rafz@~9.2.6-beta.0":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.2.6.tgz#d97484003875bf5fb5e6ec22dee97cc208363e48"
+  integrity sha512-62SivLKEpo7EfHPkxO5J3g9Cr9LF6+1A1RVOMJhkcpEYtbdbmma/d63Xp8qpMPEpk7uuWxaTb6jjyxW33pW3sg==
 
-"@react-spring/shared@~9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.2.3.tgz#eaa4a4e6bf4f43d10b4a5c920a917e84047ac50e"
-  integrity sha512-MehdmKao1oUAwSEJo8BXOz1OGgsSav/dimD1Vz920hirShj9s/I4zKnWtkdK92xQ4n35D/xD3hATHkXbt/WSvg==
+"@react-spring/shared@~9.2.6-beta.0":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.2.6.tgz#2c84e62cc0cfbbbbeb5546acd46c1f4b248bc562"
+  integrity sha512-Qrm9fopKG/RxZ3Rw+4euhrpnB3uXSyiON9skHbcBfmkkzagpkUR66MX1YLrhHw0UchcZuSDnXs0Lonzt1rpWag==
   dependencies:
-    "@react-spring/rafz" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
+    "@react-spring/rafz" "~9.2.6-beta.0"
+    "@react-spring/types" "~9.2.6-beta.0"
 
-"@react-spring/three@^9.2.4":
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/@react-spring/three/-/three-9.2.4.tgz#849c97658a6e1410b6f823ad21e2ee33feada820"
-  integrity sha512-ljFig7XW099VWwRPKPUf+4yYLivp/sSWXN3oO5SJOF/9BSoV1quS/9chZ5Myl5J14od3CsHf89Tv4FdlX5kHlA==
+"@react-spring/three@^9.2.6":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/three/-/three-9.2.6.tgz#07b6d6cf6c50103298aee1b780a6e457b1ab8ecc"
+  integrity sha512-sV80HWT5wjKgl6i51UALlMVhsad93pijEgkXh6mAefKmuDo9DDe6UufAOn1uCTVxPZKO7w9O7xgvlPm9nkBXag==
   dependencies:
-    "@react-spring/animated" "~9.2.0"
-    "@react-spring/core" "~9.2.0"
-    "@react-spring/shared" "~9.2.0"
-    "@react-spring/types" "~9.2.0"
+    "@react-spring/animated" "~9.2.6-beta.0"
+    "@react-spring/core" "~9.2.6-beta.0"
+    "@react-spring/shared" "~9.2.6-beta.0"
+    "@react-spring/types" "~9.2.6-beta.0"
 
-"@react-spring/types@~9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.2.3.tgz#08b5ca1cb262328529ee558796395f073b6029b0"
-  integrity sha512-G7AWUJavwsvvvprnYmqUXE5N1XKINktc8V72ipvkFTE3DD3GApYpX/ORNmieJljKJYvBSBzpRSIzk2qELUs30Q==
+"@react-spring/types@~9.2.6-beta.0":
+  version "9.2.6"
+  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.2.6.tgz#f60722fcf9f8492ae16d0bdc47f0ea3c2a16d2cf"
+  integrity sha512-l7mCw182DtDMnCI8CB9orgTAEoFZRtdQ6aS6YeEAqYcy3nQZPmPggIHH9DxyLw7n7vBPRSzu9gCvUMgXKpTflg==
 
-"@react-three/cannon@^3.1.2":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@react-three/cannon/-/cannon-3.1.2.tgz#8d0cfc364abe24f04548377bbfca401fe79a6b5d"
-  integrity sha512-yZuZv4B90klJeW3GT1Gyqom62s7kcDtwODQjf0cWfThDytzSZQgkd3AY7pSg9l19K/YE0NaPwYSzrGadT4ya8A==
+"@react-three/cannon@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@react-three/cannon/-/cannon-4.0.1.tgz#5243f53fce64a1caa8f715df2ecc4695d3b54f00"
+  integrity sha512-3JL37ftIBvHpOz7ev1yYkssTFImnbc00YhUulaICqdTGqK5zSw4AbsITKNtC7OeT5UmrL9XlLQpL51nsdjKX+w==
   dependencies:
     cannon-es "^0.18.0"
     cannon-es-debugger "^0.1.4"
 
-"@react-three/drei@^7.12.5":
-  version "7.12.5"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.12.5.tgz#3e7e1a0988486e63c1a09b2c8ef615d52abfaece"
-  integrity sha512-3mVraLz2Q3IQLcGoVD0RY/NmtefBBvXwxgLSdKqL6Lv6krEHuxJ34ehooVrivxPi8odb213zqRIJkM0hpPREEw==
+"@react-three/drei@^7.12.6":
+  version "7.12.6"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.12.6.tgz#9d09d493e39e7d4505f3e4f97c3c93b3115dab6d"
+  integrity sha512-JCj1HUMBowLzLxwalDm4XU1JN+YGnceYFqYidtpsKwmGC0I7UPKpV9MmNFG3yCby27y5NkA0G9ZfsX4IyaE05g==
   dependencies:
     "@babel/runtime" "^7.11.2"
     blob-polyfill "^5.0.20210201"
@@ -1753,10 +1753,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.1"
 
-"@react-three/fiber@^7.0.7":
-  version "7.0.7"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.7.tgz#32a3fc43871890d03ce55fd08db064e4c7af308a"
-  integrity sha512-cDRweUmJUbyGSn1j0r3bzKdS+MobIA93LR0j3pa2XOpjutKJsS2va38xEbbGK7ODTKVvCOdjJ9xlBB4TSS1Vhg==
+"@react-three/fiber@^7.0.10":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.10.tgz#00b5cb22e6b1e943fd72771f24fbff50c8262908"
+  integrity sha512-IHe0DjKpDX+L10EyrggVFpd0RRWCDspcFeHT4oY4s4eeOvwbQew1bbryiuE/0sFB3dUsE13xb/n/qb83EN35cg==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -1776,10 +1776,10 @@
   dependencies:
     yoga-layout-prebuilt "^1.9.6"
 
-"@react-three/test-renderer@^7.0.7":
-  version "7.0.7"
-  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.7.tgz#c42d4e9b5b09697bafebae68575ccd606df32028"
-  integrity sha512-/RCUtrkldxxV3fKRacM1qQqho2GnUgpBT3WQR9NOenUD3ETcc4Q3YVLloaBmSc1WFNxNR4WelXPfd1n118Jptg==
+"@react-three/test-renderer@^7.0.10":
+  version "7.0.10"
+  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.10.tgz#39fc1bebe8dbe27079124c49667ab3cabc8daa49"
+  integrity sha512-1JXpuSG2vq4G9Ur8mAJX/iEQ9Rn6U/JvnzLIXQT8VYjEZxCUJ8XESPIxSVLXHqJxkNN446gyOutDyixlauocRg==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
@@ -1968,10 +1968,10 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^12.1.1":
-  version "12.1.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-12.1.1.tgz#e693943aa48d0190099acdc3928a751d73bcf7d5"
-  integrity sha512-JDyWbvMuedEpP6SPL4Cvbhk59TVxQ3pwuR6ZfJHdRsHuxDd/ziSMA3nVM3fViaSbsQhuQFE/mvFrPrvQbL5kRQ==
+"@testing-library/react@^12.1.2":
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-12.1.2.tgz#f1bc9a45943461fa2a598bb4597df1ae044cfc76"
+  integrity sha512-ihQiEOklNyHIpo2Y8FREkyD1QAea054U0MVbwH1m8N9TxeFz+KoJ9LkqoKqJlzx2JDm56DVwaJ1r36JYxZM05g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.0.0"
@@ -3516,9 +3516,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001181:
-  version "1.0.30001207"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001207.tgz#364d47d35a3007e528f69adb6fecb07c2bb2cc50"
-  integrity sha512-UPQZdmAsyp2qfCTiMU/zqGSWOYaY9F9LL61V8f+8MrubsaDGpaHD9HRV/EWZGULZn0Hxu48SKzI5DgFwTvHuYw==
+  version "1.0.30001265"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001265.tgz"
+  integrity sha512-YzBnspggWV5hep1m9Z6sZVLOt7vrju8xWooFAgN6BA5qvy98qPAPb7vNUzypFaoh2pb3vlfzbDO8tB57UPGbtw==
 
 cannon-es-debugger@^0.1.4:
   version "0.1.4"
@@ -11190,10 +11190,10 @@ three-stdlib@^2.4.2:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three@^0.132.2:
-  version "0.132.2"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.132.2.tgz#95eb1856147237c03e887cbbe56f964b6fb40b5e"
-  integrity sha512-0wcR7LxxkXMn6Gi58gEs3QvY8WpTVXA31L2VOvpjm4ZPYFRHCZC13UqynheFoS5OXDYgtBneN0dhbaNBE8iLhQ==
+three@^0.133.1:
+  version "0.133.1"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.133.1.tgz#5606f4817d67a09d9212d4ccbd6826564774f8f4"
+  integrity sha512-WydohO8ll949B0FTD6MGz59Yv2Lwj8hvObg/0Heh2r42S6+tQC1WByfCNRdmG4D7+odfGod+n8JPV1I2xrboWw==
 
 throat@^5.0.0:
   version "5.0.0"
@@ -11768,10 +11768,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-vitals@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.0.tgz#ebf5428875ab5bfc1056c2e80cd177001287de7b"
-  integrity sha512-npEyJP8jHf3J71t1tRTEtz9FeKp8H2udWJUUq5ykfPhhstr//TUxiYhIEzLNwk4zv2ybAilMn7v7N6Mxmuitmg==
+web-vitals@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.1.tgz#9ae64fa9054b8865a3fa093cd8db302676822c2a"
+  integrity sha512-6i/cE+7l095Etvjo2kbtVC8OXzLc9D8XMIWBPWAt2CME/7qmIMZWQwVoKDD277poVHNdPcLgW5Jruhbi8+8Vcw==
 
 webgl-constants@^1.1.1:
   version "1.1.1"
@@ -12135,10 +12135,10 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
-wouter@^2.7.4:
-  version "2.7.4"
-  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.7.4.tgz#d528122cacf6e9805d7b953bbddfb90226850977"
-  integrity sha512-shJIsHR+gcn69L2zR+0eKquOvAcjfIEdhzf8iAP502DlrAwg5lO2Q90DqIvXryNz/mk1fe2crTB40ZHXjoF1Bg==
+wouter@^2.8.0-alpha.1:
+  version "2.8.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.8.0-alpha.1.tgz#667b35d088d24c17c06027c35b0cddb7902ce08e"
+  integrity sha512-zzamRfbq8XEJny/PRpBmXYvhhLGNbLw5y7Ve5PA9DwvvsdYCYrtwaAECXWDKbfiDMCR2HL1H267b/NVthubZaA==
 
 wrap-ansi@^5.1.0:
   version "5.1.0"
