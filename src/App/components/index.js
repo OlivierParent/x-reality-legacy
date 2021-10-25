@@ -1,7 +1,7 @@
 export { default as Animation } from "./Animation";
 export { default as Button } from "./Button";
 export { default as ButtonSpring } from "./Button/Spring";
-export { default as Clock } from "./Clock";
+export { default as ClockAnalogue } from "./Clock/Analogue";
 export { default as ClockDigital } from "./Clock/Digital";
 export { default as Cube } from "./Cube";
 export { default as Face } from "./Face";
@@ -23,6 +23,7 @@ export { default as Spring } from "./Spring";
 export { default as Suzanne } from "./Suzanne";
 export { default as SuzanneMatcapTexture } from "./Suzanne/MatcapTexture";
 export { default as SuzanneNormalTexture } from "./Suzanne/NormalTexture";
+export { default as SuzannePhysicalMaterial } from "./Suzanne/PhysicalMaterial";
 export { default as SuzanneStandardMaterial } from "./Suzanne/StandardMaterial";
 export { default as SuzanneToonMaterial } from "./Suzanne/ToonMaterial";
 export { default as SvgLoader } from "./SvgLoader";

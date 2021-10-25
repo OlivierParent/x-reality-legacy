@@ -1,13 +1,19 @@
 import { Suspense, useCallback, useEffect, useState } from "react";
 import { Route, Router } from "wouter";
 import { MathUtils } from "three";
-import { OrbitControls, Stats } from "@react-three/drei";
-// import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import {
+  GizmoHelper,
+  GizmoViewport,
+  OrbitControls,
+  Stats,
+} from "@react-three/drei";
+import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import { useControls } from "leva";
 import {
   Animation,
   Button,
   ButtonSpring,
-  Clock,
+  ClockAnalogue,
   ClockDigital,
   Cube,
   Face,
@@ -29,6 +35,7 @@ import {
   Suzanne,
   SuzanneMatcapTexture,
   SuzanneNormalTexture,
+  SuzannePhysicalMaterial,
   SuzanneStandardMaterial,
   SuzanneToonMaterial,
   Texture,
@@ -40,7 +47,6 @@ import {
   WouterPathRouter,
   WouterPathWouter,
 } from "./components";
-import { useControls } from "leva";
 
 const currentLocation = () => window.location.hash.replace("#", "") || "/";
 const useHashLocation = () => {
@@ -79,6 +85,7 @@ const Content = () => {
     "Suzanne (default)",
     "Suzanne (MatCap Texture)",
     "Suzanne (Normal Texture)",
+    "Suzanne (Physical Material)",
     "Suzanne (Standard Material)",
     "Suzanne (Toon Material)",
     "Texture",
@@ -102,10 +109,10 @@ const Content = () => {
   const { enableOrbitControls } = useControls("Controls", {
     enableOrbitControls: { label: "Orbit Controls", value: true },
   });
-  const { showEffect, showStats, useComponent, useLighting } = useControls(
+  const { showEffects, showStats, useComponent, useLighting } = useControls(
     "General",
     {
-      showEffect: { label: "Effect", value: true },
+      showEffects: { label: "Effects", value: false },
       showStats: { label: "Stats", value: false },
       useComponent: {
         label: "Component",
@@ -119,10 +126,14 @@ const Content = () => {
       },
     }
   );
-  const { showAxesHelper, showGridHelper } = useControls("Helpers", {
-    showAxesHelper: { label: "Axes Helper", value: false },
-    showGridHelper: { label: "Grid Helper", value: false },
-  });
+  const { showAxesHelper, showGizmoHelper, showGridHelper } = useControls(
+    "Helpers",
+    {
+      showAxesHelper: { label: "Axes Helper", value: false },
+      showGizmoHelper: { label: "Gizmo Helper", value: true },
+      showGridHelper: { label: "Grid Helper", value: false },
+    }
+  );
 
   function showLighting(name) {
     return useLighting === name;
@@ -134,23 +145,28 @@ const Content = () => {
 
   return (
     <Router base={process.env.PUBLIC_URL} hook={useHashLocation}>
-      <>
-        {enableOrbitControls && (
-          <OrbitControls
-            enablePan={true}
-            enableRotate={true}
-            enableZoom={true}
+      {enableOrbitControls && (
+        <OrbitControls enablePan={true} enableRotate={true} enableZoom={true} />
+      )}
+      {showAxesHelper && <axesHelper />}
+      {showGizmoHelper && (
+        <GizmoHelper alignment="bottom-right" margin={[80, 80]}>
+          <GizmoViewport
+            axisColors={[
+              "hsl(0, 100%, 50%)",
+              "hsl(120, 100%, 50%)",
+              "hsl(240, 100%, 50%)",
+            ]}
+            labelColor="black"
           />
-        )}
-        {showStats && <Stats />}
-        {showAxesHelper && <axesHelper />}
-        {showGridHelper && <gridHelper args={[10, 10, 0xffffff, 0x333333]} />}
-      </>
-      {showEffect && (
-        <></>
-        // <EffectComposer>
-        //   <Bloom height={500} luminanceThreshold={0} luminanceSmoothing={0.9} />
-        // </EffectComposer>
+        </GizmoHelper>
+      )}
+      {showGridHelper && <gridHelper args={[10, 10, 0xffffff, 0x333333]} />}
+      {showStats && <Stats />}
+      {showEffects && (
+        <EffectComposer>
+          <Bloom height={500} luminanceThreshold={0} luminanceSmoothing={0.9} />
+        </EffectComposer>
       )}
       {showLighting("Demo") && <Lighting />}
       {showLighting("Demo + GUI") && <LightingGui />}
@@ -160,7 +176,7 @@ const Content = () => {
       {showLighting("Three Point Lighting + GUI") && <LightingThreePointGui />}
       {showComponent("Button") && <Button />}
       {showComponent("Button (React Spring)") && <ButtonSpring />}
-      {showComponent("Clock (analogue)") && <Clock />}
+      {showComponent("Clock (analogue)") && <ClockAnalogue />}
       {showComponent("Clock (digital)") && <ClockDigital />}
       {showComponent("Cube") && <Cube />}
       {showComponent("Cube (positioned)") && (
@@ -171,7 +187,6 @@ const Content = () => {
       )}
       {showComponent("Face") && <Face />}
       {showComponent("Gauge") && <Gauge />}
-
       {showComponent("Socket (Socket.IO 4.0)") && <Socket />}
       {true && (
         <Suspense fallback={null}>
@@ -189,6 +204,9 @@ const Content = () => {
           )}
           {showComponent("Suzanne (Normal Texture)") && (
             <SuzanneNormalTexture />
+          )}
+          {showComponent("Suzanne (Physical Material)") && (
+            <SuzannePhysicalMaterial />
           )}
           {showComponent("Suzanne (Standard Material)") && (
             <SuzanneStandardMaterial />
