@@ -96,22 +96,13 @@ const Content = () => {
     "Wouter (router)",
   ];
 
-  const lightings = [
-    "None",
-    "Demo",
-    "Demo + GUI",
-    "Studio Lighting",
-    "Studio Lighting + GUI",
-    "Three Point Lighting",
-    "Three Point Lighting + GUI",
-  ];
+  const lightings = ["None", "Demo", "Studio", "Three Point"];
 
   const { enableOrbitControls } = useControls("Controls", {
     enableOrbitControls: { label: "Orbit Controls", value: true },
   });
-  const { showEffects, showStats, useComponent, useLighting } = useControls(
-    "General",
-    {
+  const { showEffects, showStats, useComponent, useLighting, useLightingGui } =
+    useControls("General", {
       showEffects: { label: "Effects", value: false },
       showStats: { label: "Stats", value: false },
       useComponent: {
@@ -122,10 +113,13 @@ const Content = () => {
       useLighting: {
         label: "Lighting",
         options: lightings,
-        value: "Studio Lighting",
+        value: "Studio",
       },
-    }
-  );
+      useLightingGui: {
+        label: "Lighting GUI",
+        value: false,
+      },
+    });
   const { showAxesHelper, showGizmoHelper, showGridHelper } = useControls(
     "Helpers",
     {
@@ -168,12 +162,14 @@ const Content = () => {
           <Bloom height={500} luminanceThreshold={0} luminanceSmoothing={0.9} />
         </EffectComposer>
       )}
-      {showLighting("Demo") && <Lighting />}
-      {showLighting("Demo + GUI") && <LightingGui />}
-      {showLighting("Studio Lighting") && <LightingStudio />}
-      {showLighting("Studio Lighting + GUI") && <LightingStudioGui />}
-      {showLighting("Three Point Lighting") && <LightingThreePoint />}
-      {showLighting("Three Point Lighting + GUI") && <LightingThreePointGui />}
+      {showLighting("Demo") && !useLightingGui && <Lighting />}
+      {showLighting("Demo") && useLightingGui && <LightingGui />}
+      {showLighting("Studio") && !useLightingGui && <LightingStudio />}
+      {showLighting("Studio") && useLightingGui && <LightingStudioGui />}
+      {showLighting("Three Point") && !useLightingGui && <LightingThreePoint />}
+      {showLighting("Three Point") && useLightingGui && (
+        <LightingThreePointGui />
+      )}
       {showComponent("Button") && <Button />}
       {showComponent("Button (React Spring)") && <ButtonSpring />}
       {showComponent("Clock (analogue)") && <ClockAnalogue />}
