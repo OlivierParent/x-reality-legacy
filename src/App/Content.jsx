@@ -101,25 +101,10 @@ const Content = () => {
   const { enableOrbitControls } = useControls("Controls", {
     enableOrbitControls: { label: "Orbit Controls", value: true },
   });
-  const { showEffects, showStats, useComponent, useLighting, useLightingGui } =
-    useControls("General", {
-      showEffects: { label: "Effects", value: false },
-      showStats: { label: "Stats", value: false },
-      useComponent: {
-        label: "Component",
-        options: components,
-        value: "Suzanne (default)",
-      },
-      useLighting: {
-        label: "Lighting",
-        options: lightings,
-        value: "Studio",
-      },
-      useLightingGui: {
-        label: "Lighting GUI",
-        value: false,
-      },
-    });
+  const { showEffects, showStats } = useControls("General", {
+    showEffects: { label: "Effects", value: false },
+    showStats: { label: "Stats", value: false },
+  });
   const { showAxesHelper, showGizmoHelper, showGridHelper } = useControls(
     "Helpers",
     {
@@ -128,6 +113,24 @@ const Content = () => {
       showGridHelper: { label: "Grid Helper", value: false },
     }
   );
+  const { useComponent } = useControls("Components", {
+    useComponent: {
+      label: "Component",
+      options: components,
+      value: "Suzanne (default)",
+    },
+  });
+  const { useLighting, useLightingGui } = useControls("Lightings", {
+    useLighting: {
+      label: "Lighting",
+      options: lightings,
+      value: "Studio",
+    },
+    useLightingGui: {
+      label: "GUI",
+      value: false,
+    },
+  });
 
   function showLighting(name) {
     return useLighting === name;

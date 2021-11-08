@@ -82,7 +82,7 @@ const ClockAnalogue = (props) => {
         {Array(HH)
           .fill(null)
           .map((value, index) => {
-            const c = new MathCircle(CLOCK.MARK.HH.LENGTH * 4);
+            const c = new MathCircle(CLOCK.MARK.HH.LENGTH * 7.5);
             const angle = (index * 360) / HH + 90;
             const { x, y } = c.getCoordinates(angle);
             return (
@@ -151,7 +151,6 @@ const ClockAnalogue = (props) => {
           .fill(null)
           .map((value, index) => {
             const radians = MathUtils.degToRad((360 / MM) * index);
-
             return (
               <group
                 key={index}
@@ -197,7 +196,7 @@ const ClockAnalogue = (props) => {
           position={[0, 0, 0.05]}
           rotation={[-90, 0, 0].map((degrees) => MathUtils.degToRad(degrees))}
         >
-          <cylinderGeometry args={[0.1, 0.05, CLOCK.HAND.THICKNESS * 5, 36]} />
+          <cylinderGeometry args={[0.1, 0.05, CLOCK.HAND.THICKNESS * 7, 36]} />
           <meshStandardMaterial />
         </mesh>
       </group>
