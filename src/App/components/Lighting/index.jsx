@@ -10,7 +10,12 @@ const Lighting = () => {
         intensity={1}
         position={[4, 4, 1]}
       />
-      <hemisphereLight />
+      <hemisphereLight
+        castShadow={true}
+        color={0xffffff}
+        groundColor={0xffffff}
+        position={[0, 1, 0]}
+      />
       <pointLight
         castShadow={true}
         color={0xffcc77}

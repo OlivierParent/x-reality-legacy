@@ -1,37 +1,36 @@
 import { useRef } from "react";
 import { DirectionalLightHelper } from "three";
-import { useControls } from "leva";
+import { folder, useControls } from "leva";
 import { useHelper } from "@react-three/drei";
 
 const LightingStudio = () => {
-  const { ambientLightColor, ambientLightIntensity } = useControls(
-    "Lighting - Ambient Light",
-    {
+  const {
+    ambientLightColor,
+    ambientLightIntensity,
+    frontLightColor,
+    frontLightIntensity,
+    leftLightColor,
+    leftLightIntensity,
+    rightLightColor,
+    rightLightIntensity,
+  } = useControls("Lightings", {
+    "Ambient Light": folder({
       ambientLightColor: { label: "Color", value: "hsl(0, 0%, 100%)" },
       ambientLightIntensity: { label: "Intensity", max: 1, min: 0, value: 0.1 },
-    }
-  );
-  const { frontLightColor, frontLightIntensity } = useControls(
-    "Lighting - Front Light",
-    {
+    }),
+    "Front Light": folder({
       frontLightColor: { label: "Color", value: "hsl(0, 0%, 70%)" },
       frontLightIntensity: { label: "Intensity", max: 2, min: 0, value: 0.4 },
-    }
-  );
-  const { leftLightColor, leftLightIntensity } = useControls(
-    "Lighting - Left Light",
-    {
+    }),
+    "Left Light": folder({
       leftLightColor: { label: "Color", value: "hsl(210, 100%, 70%)" },
       leftLightIntensity: { label: "Intensity", max: 2, min: 0, value: 1 },
-    }
-  );
-  const { rightLightColor, rightLightIntensity } = useControls(
-    "Lighting - Right Light",
-    {
+    }),
+    "Right Light": folder({
       rightLightColor: { label: "Color", value: "hsl(30, 100%, 70%)" },
       rightLightIntensity: { label: "Intensity", max: 2, min: 0, value: 1 },
-    }
-  );
+    }),
+  });
 
   const frontLightRef = useRef();
   const leftLightRef = useRef();

@@ -1,37 +1,41 @@
 import { useRef } from "react";
 import { SpotLightHelper } from "three";
-import { useControls } from "leva";
 import { useHelper } from "@react-three/drei";
+import { folder, useControls } from "leva";
 
 const LightingThreePointGui = () => {
-  const { ambientLightColor, ambientLightIntensity } = useControls(
-    "Lighting - Ambient Light",
-    {
+  const {
+    ambientLightColor,
+    ambientLightIntensity,
+    backLightColor,
+    backLightIntensity,
+    fillLightColor,
+    fillLightIntensity,
+    keyLightColor,
+    keyLightIntensity,
+  } = useControls("Lightings", {
+    "Ambient Light": folder({
       ambientLightColor: { label: "Color", value: "hsl(0, 0%, 100%)" },
-      ambientLightIntensity: { label: "Intensity", max: 1, min: 0, value: 0.1 },
-    }
-  );
-  const { backLightColor, backLightIntensity } = useControls(
-    "Lighting - Back Light",
-    {
+      ambientLightIntensity: {
+        label: "Intensity",
+        max: 1,
+        min: 0,
+        value: 0.1,
+      },
+    }),
+    "Back Light": folder({
       backLightColor: { label: "Color", value: "hsl(0, 0%, 70%)" },
       backLightIntensity: { label: "Intensity", max: 2, min: 0, value: 0.75 },
-    }
-  );
-  const { fillLightColor, fillLightIntensity } = useControls(
-    "Lighting - Fill Light",
-    {
+    }),
+    "Fill Light": folder({
       fillLightColor: { label: "Color", value: "hsl(210, 100%, 70%)" },
       fillLightIntensity: { label: "Intensity", max: 2, min: 0, value: 0.75 },
-    }
-  );
-  const { keyLightColor, keyLightIntensity } = useControls(
-    "Lighting - Key Light",
-    {
+    }),
+    "Key Light": folder({
       keyLightColor: { label: "Color", value: "hsl(30, 100%, 70%)" },
       keyLightIntensity: { label: "Intensity", max: 2, min: 0, value: 0.75 },
-    }
-  );
+    }),
+  });
 
   const backLightRef = useRef();
   const fillLightRef = useRef();

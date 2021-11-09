@@ -1,44 +1,50 @@
 import { MathUtils } from "three";
 import { Plane, useGLTF } from "@react-three/drei";
-import { useControls } from "leva";
+import { folder, useControls } from "leva";
 
 import suzanneGlb from "./suzanne.glb";
 
 const SuzanneStandardMaterial = () => {
   const { nodes } = useGLTF(suzanneGlb, true);
 
-  const { dithering, opacity, transparent } = useControls("Material", {
-    dithering: { label: "Dithering", value: false },
-    opacity: { label: "Transparent", max: 1, min: 0, value: 1 },
-    transparent: { label: "Transparent", value: true },
-  });
-
   const {
     color,
+    dithering,
     emissive,
     emissiveIntensity,
     metalness,
+    opacity,
     refractionRatio,
     roughness,
+    transparent,
     wireframe,
-  } = useControls("Standard Material", {
-    color: { label: "Color", value: "#ffffff" },
-    emissive: { label: "Emissive", value: "#000000" },
-    emissiveIntensity: {
-      label: "Emissive Intensity",
-      max: 5,
-      min: 0,
-      value: 1,
-    },
-    metalness: { label: "Metalness", max: 1, min: 0, value: 0 },
-    refractionRatio: {
-      label: "Refraction Ratio",
-      max: 2,
-      min: 0,
-      value: 0.98,
-    },
-    roughness: { label: "Roughness", max: 1, min: 0, value: 1 },
-    wireframe: { label: "Wireframe", value: false },
+  } = useControls("Components", {
+    Materials: folder({
+      Material: folder({
+        dithering: { label: "Dithering", value: false },
+        opacity: { label: "Transparent", max: 1, min: 0, value: 1 },
+        transparent: { label: "Transparent", value: true },
+      }),
+      "Standard Material": folder({
+        color: { label: "Color", value: "#ffffff" },
+        emissive: { label: "Emissive", value: "#000000" },
+        emissiveIntensity: {
+          label: "Emissive Intensity",
+          max: 5,
+          min: 0,
+          value: 1,
+        },
+        metalness: { label: "Metalness", max: 1, min: 0, value: 0 },
+        refractionRatio: {
+          label: "Refraction Ratio",
+          max: 2,
+          min: 0,
+          value: 0.98,
+        },
+        roughness: { label: "Roughness", max: 1, min: 0, value: 1 },
+        wireframe: { label: "Wireframe", value: false },
+      }),
+    }),
   });
 
   return (

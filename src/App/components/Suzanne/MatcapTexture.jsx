@@ -5,7 +5,6 @@ import suzanneGlb from "./suzanne.glb";
 
 const SuzanneMatcapTexture = () => {
   const { nodes } = useGLTF(suzanneGlb, true);
-
   const [matcap] = useMatcapTexture(MatCap.id.WORN_GOLD, MatCap.size.XL);
 
   return (
