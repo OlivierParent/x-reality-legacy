@@ -1789,7 +1789,7 @@
     cannon-es "^0.18.0"
     cannon-es-debugger "^0.1.4"
 
-"@react-three/drei@^7.20.1":
+"@react-three/drei@7.20.1":
   version "7.20.1"
   resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.20.1.tgz#4bd355724119d7bf2c263888026cc5762b04e75e"
   integrity sha512-Cv7smD5FmCAaTh7aZoX4g1BdsOht3xqHocUOI2kuKTaqa8+wgpCR9geugfuGnk5C9tKMMI6axv7lwx7RDm5YRg==
@@ -11156,10 +11156,10 @@ three-stdlib@^2.5.4:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three-stdlib@^2.5.5:
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.5.5.tgz#ee2d6cf84ca366f5e8e74c0dbe76211532a8b912"
-  integrity sha512-9Yba7LbwvKSqk09Pu+HHSnOTAhCWcLsIV9r2p0mcerVaqUpL1uKY4BSTzbWkhh4mMA/s/etlW0fYdL3pW/pPjg==
+three-stdlib@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.5.6.tgz#85c33bb3317851a28d798252385a108db54b082b"
+  integrity sha512-m9fm0xybYAMOSeGuEUA1A9yRGBWyx9+wDCPIW9OJwzsl3nXUyIp05tzbJFXu0Inl1YK2ITvc0dBASoSLzxXgXw==
   dependencies:
     "@babel/runtime" "^7.14.6"
     "@webgpu/glslang" "^0.0.15"
@@ -11173,7 +11173,7 @@ three-stdlib@^2.5.5:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three@^0.134.0:
+three@0.134.0:
   version "0.134.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.134.0.tgz#d7ad4d85d050da0861bf39749b06ddfb5f17157f"
   integrity sha512-LbBerg7GaSPjYtTOnu41AMp7tV6efUNR3p4Wk5NzkSsNTBuA5mDGOfwwZL1jhhVMLx9V20HolIUo0+U3AXehbg==
@@ -12089,10 +12089,10 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
-wouter@^2.8.0-alpha.1:
-  version "2.8.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.8.0-alpha.1.tgz#667b35d088d24c17c06027c35b0cddb7902ce08e"
-  integrity sha512-zzamRfbq8XEJny/PRpBmXYvhhLGNbLw5y7Ve5PA9DwvvsdYCYrtwaAECXWDKbfiDMCR2HL1H267b/NVthubZaA==
+wouter@^2.8.0-alpha.2:
+  version "2.8.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.8.0-alpha.2.tgz#d57dfbd23b964b8bd848f2ed3eb2b38cf3c00e00"
+  integrity sha512-aPsL5m5rW9RiceClOmGj6t5gn9Ut2TJVr98UDi1u9MIRNYiYVflg6vFIjdDYJ4IAyH0JdnkSgGwfo0LQS3k2zg==
 
 wrap-ansi@^5.1.0:
   version "5.1.0"
