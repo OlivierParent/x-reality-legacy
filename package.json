@@ -11,7 +11,7 @@
     "@react-three/flex": "^0.7.0",
     "@react-three/postprocessing": "^2.0.5",
     "@react-three/test-renderer": "^7.0.17",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "d3-ease": "^3.0.1",
