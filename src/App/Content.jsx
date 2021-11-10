@@ -84,7 +84,7 @@ const Content = () => {
       useInputControls: {
         label: "Controls",
         options: ["Orbit", "Trackball"],
-        value: "Trackball",
+        value: "Orbit",
       },
     }),
   });
