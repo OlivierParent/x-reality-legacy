@@ -1,18 +1,31 @@
-import { DoubleSide, Vector2 } from "three";
-import { useTexture } from "@react-three/drei";
+import { useControls } from "leva";
 
-import uvGrid from "./UV_Grid_Sm.jpg";
+import Default from "./Default";
+import Svg from "./Svg";
+
+const IMAGE = {
+  Default: "Default",
+  Svg: "Svg",
+};
 
 const Image = () => {
-  const texture = useTexture(uvGrid, true);
-  texture.offset = new Vector2(0, 0);
-  texture.repeat = new Vector2(1, 1);
+  const { useImage } = useControls("Components", {
+    useImage: {
+      label: "Image",
+      options: IMAGE,
+      value: IMAGE.Default,
+    },
+  });
+
+  function enableImage(name) {
+    return useImage === name;
+  }
 
   return (
-    <mesh>
-      <planeGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial center map={texture} side={DoubleSide} />
-    </mesh>
+    <>
+      {enableImage(IMAGE.Default) && <Default />}
+      {enableImage(IMAGE.Svg) && <Svg />}
+    </>
   );
 };
 

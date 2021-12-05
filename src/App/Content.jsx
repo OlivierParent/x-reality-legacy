@@ -14,34 +14,19 @@ import { folder, useControls } from "leva";
 import {
   Animation,
   Button,
-  ButtonSpring,
-  ClockAnalogue,
-  ClockDigital,
+  Clock,
   Cube,
   Face,
   Gauge,
   Image,
-  ImageSvg,
   Lighting,
-  LightingGui,
-  LightingStudio,
-  LightingStudioGui,
-  LightingThreePoint,
-  LightingThreePointGui,
   Logo,
-  LogoDouble,
   LoremIpsum,
   Normals,
   Socket,
   Spring,
   Suzanne,
-  SuzanneMatcapTexture,
-  SuzanneNormalTexture,
-  SuzannePhysicalMaterial,
-  SuzanneStandardMaterial,
-  SuzanneToonMaterial,
   Texture,
-  TextureBakedNormals,
   Tripod,
   World,
   WorldSound,
@@ -64,6 +49,11 @@ const useHashLocation = () => {
   return [location, navigate];
 };
 
+const CONTROLS = {
+  Orbit: "Orbit",
+  Trackball: "Trackball",
+};
+
 const Content = () => {
   const {
     enableAxesHelper,
@@ -83,60 +73,61 @@ const Content = () => {
     "Input Controls": folder({
       useInputControls: {
         label: "Controls",
-        options: ["Orbit", "Trackball"],
-        value: "Orbit",
+        options: CONTROLS,
+        value: CONTROLS.Orbit,
       },
     }),
   });
 
+  const COMPONENT = {
+    Animation: "Animation",
+    Button: "Button",
+    Clock: "Clock",
+    Cube: "Cube",
+    Cube_Positioned: "Cube_Positioned",
+    Face: "Face",
+    Gauge: "Gauge",
+    Image: "Image",
+    Logo: "Logo",
+    LoremIpsum: "LoremIpsum",
+    None: "None",
+    Normals: "Normals",
+    Socket: "Socket",
+    Spring: "Spring",
+    Suzanne: "Suzanne",
+    Texture: "Texture",
+    Tripod: "Tripod",
+    World: "World",
+    WorldSound: "WorldSound",
+    Wouter: "Wouter",
+  };
+
   const { useComponent } = useControls("Components", {
     useComponent: {
       label: "Component",
-      options: [
-        "None",
-        "Animation",
-        "Button",
-        "Button (React Spring)",
-        "Clock (analogue)",
-        "Clock (digital)",
-        "Cube (positioned)",
-        "Cube",
-        "Face",
-        "Gauge",
-        "Image",
-        "Image (SVG)",
-        "Logo",
-        "Logo (double)",
-        "Lorem Ipsum",
-        "Normals",
-        "Socket (Socket.IO 4.0)",
-        "Spring",
-        "Suzanne (default)",
-        "Suzanne (MatCap Texture)",
-        "Suzanne (Normal Texture)",
-        "Suzanne (Physical Material)",
-        "Suzanne (Standard Material)",
-        "Suzanne (Toon Material)",
-        "Texture",
-        "Texture (Baked Normals)",
-        "Tripod",
-        "World",
-        "World (Sound)",
-        "Wouter (Router)",
-      ],
-      value: "Suzanne (default)",
-    },
-  });
-
-  const { useLighting, useLightingGui } = useControls("Lightings", {
-    useLighting: {
-      label: "Lighting",
-      options: ["None", "Demo", "Studio", "Three Point"],
-      value: "Studio",
-    },
-    useLightingGui: {
-      label: "Gui",
-      value: false,
+      options: {
+        "None                  ": COMPONENT.None,
+        "Animation             ": COMPONENT.Animation,
+        "Button                ": COMPONENT.Button,
+        "Clock                 ": COMPONENT.Clock,
+        "Cube                  ": COMPONENT.Cube,
+        "Cube (positioned)     ": COMPONENT.Cube_Positioned,
+        "Face                  ": COMPONENT.Face,
+        "Gauge                 ": COMPONENT.Gauge,
+        "Image                 ": COMPONENT.Image,
+        "Logo                  ": COMPONENT.Logo,
+        "Lorem Ipsum           ": COMPONENT.LoremIpsum,
+        "Normals               ": COMPONENT.Normals,
+        "Socket (Socket.IO 4.4)": COMPONENT.Socket,
+        "Spring                ": COMPONENT.Spring,
+        "Suzanne               ": COMPONENT.Suzanne,
+        "Texture               ": COMPONENT.Texture,
+        "Tripod                ": COMPONENT.Tripod,
+        "World                 ": COMPONENT.World,
+        "World (Sound)         ": COMPONENT.WorldSound,
+        "Wouter (Router)       ": COMPONENT.Wouter,
+      },
+      value: COMPONENT.Suzanne,
     },
   });
 
@@ -148,21 +139,17 @@ const Content = () => {
     return useComponent === name;
   }
 
-  function enableLighting(name) {
-    return useLighting === name;
-  }
-
   return (
     <Router base={process.env.PUBLIC_URL} hook={useHashLocation}>
       <>
-        {enableInputControls("Orbit") && (
+        {enableInputControls(CONTROLS.Orbit) && (
           <OrbitControls
             enablePan={true}
             enableRotate={true}
             enableZoom={true}
           />
         )}
-        {enableInputControls("Trackball") && <TrackballControls />}
+        {enableInputControls(CONTROLS.Trackball) && <TrackballControls />}
       </>
       <>
         {enableAxesHelper && <axesHelper />}
@@ -186,25 +173,11 @@ const Content = () => {
           <Bloom height={500} luminanceThreshold={0} luminanceSmoothing={0.9} />
         </EffectComposer>
       )}
+      <Lighting />
       <>
-        {enableLighting("Demo") && !useLightingGui && <Lighting />}
-        {enableLighting("Demo") && useLightingGui && <LightingGui />}
-        {enableLighting("Studio") && !useLightingGui && <LightingStudio />}
-        {enableLighting("Studio") && useLightingGui && <LightingStudioGui />}
-        {enableLighting("Three Point") && !useLightingGui && (
-          <LightingThreePoint />
-        )}
-        {enableLighting("Three Point") && useLightingGui && (
-          <LightingThreePointGui />
-        )}
-      </>
-      <>
-        {enableComponent("Button") && <Button />}
-        {enableComponent("Button (React Spring)") && <ButtonSpring />}
-        {enableComponent("Clock (analogue)") && <ClockAnalogue />}
-        {enableComponent("Clock (digital)") && <ClockDigital />}
-        {enableComponent("Cube") && <Cube />}
-        {enableComponent("Cube (positioned)") && (
+        {enableComponent(COMPONENT.Button) && <Button />}
+        {enableComponent(COMPONENT.Cube) && <Cube />}
+        {enableComponent(COMPONENT.Cube_Positioned) && (
           <Cube
             position={[1, 1, 1]}
             rotation={[45, 45, 45].map((degrees) =>
@@ -212,44 +185,25 @@ const Content = () => {
             )}
           />
         )}
-        {enableComponent("Face") && <Face />}
-        {enableComponent("Gauge") && <Gauge />}
-        {enableComponent("Socket (Socket.IO 4.0)") && <Socket />}
+        {enableComponent(COMPONENT.Face) && <Face />}
+        {enableComponent(COMPONENT.Gauge) && <Gauge />}
+        {enableComponent(COMPONENT.Socket) && <Socket />}
         <Suspense fallback={null}>
-          {enableComponent("Animation") && <Animation />}
-          {enableComponent("Logo") && <Logo />}
-          {enableComponent("Logo (double)") && <LogoDouble />}
-          {enableComponent("Lorem Ipsum") && <LoremIpsum />}
-          {enableComponent("Normals") && <Normals />}
-          {enableComponent("Image") && <Image />}
-          {enableComponent("Image (SVG)") && <ImageSvg />}
-          {enableComponent("Spring") && <Spring />}
-          {enableComponent("Suzanne (default)") && <Suzanne />}
-          {enableComponent("Suzanne (MatCap Texture)") && (
-            <SuzanneMatcapTexture />
-          )}
-          {enableComponent("Suzanne (Normal Texture)") && (
-            <SuzanneNormalTexture />
-          )}
-          {enableComponent("Suzanne (Physical Material)") && (
-            <SuzannePhysicalMaterial />
-          )}
-          {enableComponent("Suzanne (Standard Material)") && (
-            <SuzanneStandardMaterial />
-          )}
-          {enableComponent("Suzanne (Toon Material)") && (
-            <SuzanneToonMaterial />
-          )}
-          {enableComponent("Texture") && <Texture />}
-          {enableComponent("Texture (Baked Normals)") && (
-            <TextureBakedNormals />
-          )}
-          {enableComponent("World (Sound)") && <WorldSound />}
+          {enableComponent(COMPONENT.Animation) && <Animation />}
+          {enableComponent(COMPONENT.Clock) && <Clock />}
+          {enableComponent(COMPONENT.Image) && <Image />}
+          {enableComponent(COMPONENT.Logo) && <Logo />}
+          {enableComponent(COMPONENT.LoremIpsum) && <LoremIpsum />}
+          {enableComponent(COMPONENT.Normals) && <Normals />}
+          {enableComponent(COMPONENT.Spring) && <Spring />}
+          {enableComponent(COMPONENT.Suzanne) && <Suzanne />}
+          {enableComponent(COMPONENT.Texture) && <Texture />}
+          {enableComponent(COMPONENT.WorldSound) && <WorldSound />}
         </Suspense>
 
-        {enableComponent("Tripod") && <Tripod />}
-        {enableComponent("World") && <World />}
-        {enableComponent("Wouter (router)") && <Wouter />}
+        {enableComponent(COMPONENT.Tripod) && <Tripod />}
+        {enableComponent(COMPONENT.World) && <World />}
+        {enableComponent(COMPONENT.Wouter) && <Wouter />}
       </>
       <Route component={WouterPathRouter} path="/router" />
       <Route component={WouterPathWouter} path="/wouter" />

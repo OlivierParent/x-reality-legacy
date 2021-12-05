@@ -1,28 +1,33 @@
-import { useGLTF } from "@react-three/drei";
+import { useControls } from "leva";
 
-import cubeGlb from "./TexturedCube.glb";
+import Default from "./Default";
+import BakedNormals from "./BakedNormals";
+
+const TEXTURE = {
+  Default: "Default",
+  BakedNormals: "BakedNormals",
+};
 
 const Texture = () => {
-  const { nodes, materials } = useGLTF(cubeGlb, true);
+  const { useTexture } = useControls("Components", {
+    useTexture: {
+      label: "Type",
+      options: {
+        "Default      ": TEXTURE.Default,
+        "Baked Normals": TEXTURE.BakedNormals,
+      },
+      value: TEXTURE.Default,
+    },
+  });
+
+  function enableTexture(name) {
+    return useTexture === name;
+  }
+
   return (
     <>
-      <group position={[-1.5, 0, 0]}>
-        <mesh
-          geometry={nodes.Cube_1.geometry}
-          material={materials["MaterialTexture"]}
-        />
-        <mesh geometry={nodes.Cube_2.geometry} material={materials["Blue"]} />
-      </group>
-      {nodes.Cube.children.map((child, index) => {
-        return (
-          <mesh
-            key={index}
-            geometry={child.geometry}
-            material={child.material}
-            position={[1.5, 0, 0]}
-          />
-        );
-      })}
+      {enableTexture(TEXTURE.Default) && <Default />}
+      {enableTexture(TEXTURE.BakedNormals) && <BakedNormals />}
     </>
   );
 };

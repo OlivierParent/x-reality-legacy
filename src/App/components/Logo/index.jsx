@@ -1,28 +1,32 @@
-import { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { useControls } from "leva";
 
-import gltfLogoGlb from "./gltf-logo.glb";
+import Default from "./Default";
+import Double from "./Double";
 
-const Logo = () => {
-  const [clockwise, setClockwise] = useState(false);
+const LOGO = {
+  Default: "Default",
+  Double: "Double",
+};
 
-  const gltfLogo = useGLTF(gltfLogoGlb, true);
-  const logoRef = useRef();
-  const speed = 0.025;
-
-  useFrame(() => {
-    logoRef.current.rotation.y += speed * (clockwise ? 1 : -1);
+const Image = () => {
+  const { useLogo } = useControls("Components", {
+    useLogo: {
+      label: "Variant",
+      options: LOGO,
+      value: LOGO.Default,
+    },
   });
 
+  function enableLogo(name) {
+    return useLogo === name;
+  }
+
   return (
-    <primitive
-      object={gltfLogo.scene}
-      onClick={() => setClockwise(!clockwise)}
-      position={[0, 0, 0]}
-      ref={logoRef}
-    />
+    <>
+      {enableLogo(LOGO.Default) && <Default />}
+      {enableLogo(LOGO.Double) && <Double />}
+    </>
   );
 };
 
-export default Logo;
+export default Image;
