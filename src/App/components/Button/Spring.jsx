@@ -3,10 +3,10 @@ import { MathUtils } from "three";
 import { Text } from "@react-three/drei";
 import { animated, useSpring } from "@react-spring/three";
 
-const Spring = (props) => {
+const ButtonSpring = (props) => {
+  const [colorCurrent, setColorCurrent] = useState(0xff0000);
   const [hover, setHover] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const [colorCurrent, setColorCurrent] = useState(0xff0000);
   const { opacity, rotation, scale } = useSpring({
     opacity: toggle ? 0.5 : 0.2,
     rotation: toggle ? [MathUtils.degToRad(-45), 0, 0] : [0, 0, 0],
@@ -37,4 +37,4 @@ const Spring = (props) => {
   );
 };
 
-export default Spring;
+export default ButtonSpring;

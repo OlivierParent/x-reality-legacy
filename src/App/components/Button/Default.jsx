@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Text } from "@react-three/drei";
 
 const ButtonDefault = () => {
-  const [hover, setHover] = useState(false);
   const [color, setColor] = useState(0x00ff00);
+  const [hover, setHover] = useState(false);
 
   return (
     <group
@@ -13,14 +13,14 @@ const ButtonDefault = () => {
       onPointerOver={() => setHover(true)}
     >
       <mesh>
-        <meshMatcapMaterial
+        <meshBasicMaterial
           color={color}
           opacity={hover ? 0.75 : 1}
           transparent={true}
         />
         <planeGeometry args={[1, 0.5]} />
       </mesh>
-      <Text color="white" fontSize={0.2} position={[0, 0, 0.01]}>
+      <Text fontSize={0.2} position={[0, 0, 0.01]}>
         Click Me!
       </Text>
     </group>

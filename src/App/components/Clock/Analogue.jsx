@@ -14,7 +14,7 @@ const SS = 60;
 
 const CLOCK_SIZE = 2;
 
-const CLOCK = {
+const CLOCK = Object.freeze({
   HAND: {
     HH: {
       LENGTH: 0.6 * CLOCK_SIZE,
@@ -37,7 +37,7 @@ const CLOCK = {
     },
     OFFSET: 0.05 * CLOCK_SIZE,
   },
-};
+});
 
 /**
  * Clock using standard React Three Fiber JSX

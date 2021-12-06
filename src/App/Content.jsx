@@ -48,10 +48,32 @@ const useHashLocation = () => {
   return [location, navigate];
 };
 
-const CONTROLS = {
+const COMPONENT = Object.freeze({
+  Animation: "Animation",
+  Button: "Button",
+  Clock: "Clock",
+  Cube: "Cube",
+  Cube_Positioned: "Cube_Positioned",
+  Face: "Face",
+  Gauge: "Gauge",
+  Image: "Image",
+  Logo: "Logo",
+  LoremIpsum: "LoremIpsum",
+  None: "None",
+  Normals: "Normals",
+  Socket: "Socket",
+  Spring: "Spring",
+  Suzanne: "Suzanne",
+  Texture: "Texture",
+  Tripod: "Tripod",
+  World: "World",
+  Wouter: "Wouter",
+});
+
+const CONTROLS = Object.freeze({
   Orbit: "Orbit",
   Trackball: "Trackball",
-};
+});
 
 const Content = () => {
   const {
@@ -77,28 +99,6 @@ const Content = () => {
       },
     }),
   });
-
-  const COMPONENT = {
-    Animation: "Animation",
-    Button: "Button",
-    Clock: "Clock",
-    Cube: "Cube",
-    Cube_Positioned: "Cube_Positioned",
-    Face: "Face",
-    Gauge: "Gauge",
-    Image: "Image",
-    Logo: "Logo",
-    LoremIpsum: "LoremIpsum",
-    None: "None",
-    Normals: "Normals",
-    Socket: "Socket",
-    Spring: "Spring",
-    Suzanne: "Suzanne",
-    Texture: "Texture",
-    Tripod: "Tripod",
-    World: "World",
-    Wouter: "Wouter",
-  };
 
   const { useComponent } = useControls("Components", {
     useComponent: {

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/x-reality/static/css/main.36a7e8b9.chunk.css",
-    "main.js": "/x-reality/static/js/main.2763e53d.chunk.js",
-    "main.js.map": "/x-reality/static/js/main.2763e53d.chunk.js.map",
+    "main.js": "/x-reality/static/js/main.59a350db.chunk.js",
+    "main.js.map": "/x-reality/static/js/main.59a350db.chunk.js.map",
     "runtime-main.js": "/x-reality/static/js/runtime-main.119bb6d4.js",
     "runtime-main.js.map": "/x-reality/static/js/runtime-main.119bb6d4.js.map",
     "static/js/2.2476a67d.chunk.js": "/x-reality/static/js/2.2476a67d.chunk.js",
@@ -21,12 +21,12 @@
     "static/media/bensound-evolution.4375aef0.mp3": "/x-reality/static/media/bensound-evolution.4375aef0.mp3",
     "static/media/gltf-logo.d3501fc2.glb": "/x-reality/static/media/gltf-logo.d3501fc2.glb",
     "static/media/normals.c5aed970.glb": "/x-reality/static/media/normals.c5aed970.glb",
-    "static/media/suzanne.a6e83718.glb": "/x-reality/static/media/suzanne.a6e83718.glb"
+    "static/media/suzanne.f8d5e374.glb": "/x-reality/static/media/suzanne.f8d5e374.glb"
   },
   "entrypoints": [
     "static/js/runtime-main.119bb6d4.js",
     "static/js/2.2476a67d.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
-    "static/js/main.2763e53d.chunk.js"
+    "static/js/main.59a350db.chunk.js"
   ]
 }
