@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SVGLoader } from "three-stdlib";
+
 import Group from "./Group";
 
 const SvgLoader = (props) => {

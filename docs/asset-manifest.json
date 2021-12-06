@@ -1,33 +1,32 @@
 {
   "files": {
     "main.css": "/x-reality/static/css/main.36a7e8b9.chunk.css",
-    "main.js": "/x-reality/static/js/main.f50c0a3d.chunk.js",
-    "main.js.map": "/x-reality/static/js/main.f50c0a3d.chunk.js.map",
-    "runtime-main.js": "/x-reality/static/js/runtime-main.2237c0b8.js",
-    "runtime-main.js.map": "/x-reality/static/js/runtime-main.2237c0b8.js.map",
-    "static/js/2.3aaf91ac.chunk.js": "/x-reality/static/js/2.3aaf91ac.chunk.js",
-    "static/js/2.3aaf91ac.chunk.js.map": "/x-reality/static/js/2.3aaf91ac.chunk.js.map",
-    "static/js/3.15dfd57c.chunk.js": "/x-reality/static/js/3.15dfd57c.chunk.js",
-    "static/js/3.15dfd57c.chunk.js.map": "/x-reality/static/js/3.15dfd57c.chunk.js.map",
+    "main.js": "/x-reality/static/js/main.2763e53d.chunk.js",
+    "main.js.map": "/x-reality/static/js/main.2763e53d.chunk.js.map",
+    "runtime-main.js": "/x-reality/static/js/runtime-main.119bb6d4.js",
+    "runtime-main.js.map": "/x-reality/static/js/runtime-main.119bb6d4.js.map",
+    "static/js/2.2476a67d.chunk.js": "/x-reality/static/js/2.2476a67d.chunk.js",
+    "static/js/2.2476a67d.chunk.js.map": "/x-reality/static/js/2.2476a67d.chunk.js.map",
+    "static/js/3.4c785c0d.chunk.js": "/x-reality/static/js/3.4c785c0d.chunk.js",
+    "static/js/3.4c785c0d.chunk.js.map": "/x-reality/static/js/3.4c785c0d.chunk.js.map",
     "index.html": "/x-reality/index.html",
     "static/css/main.36a7e8b9.chunk.css.map": "/x-reality/static/css/main.36a7e8b9.chunk.css.map",
-    "static/js/2.3aaf91ac.chunk.js.LICENSE.txt": "/x-reality/static/js/2.3aaf91ac.chunk.js.LICENSE.txt",
+    "static/js/2.2476a67d.chunk.js.LICENSE.txt": "/x-reality/static/js/2.2476a67d.chunk.js.LICENSE.txt",
     "static/media/BakedNormals.03580610.glb": "/x-reality/static/media/BakedNormals.03580610.glb",
     "static/media/SVG_logo.e87754b4.svg": "/x-reality/static/media/SVG_logo.e87754b4.svg",
     "static/media/TexturedCube.2b78eebc.glb": "/x-reality/static/media/TexturedCube.2b78eebc.glb",
     "static/media/UV_Grid_Sm.8ab40f71.jpg": "/x-reality/static/media/UV_Grid_Sm.8ab40f71.jpg",
     "static/media/animation.07175b80.glb": "/x-reality/static/media/animation.07175b80.glb",
     "static/media/arteveldehogeschool_logo.6220cd57.svg": "/x-reality/static/media/arteveldehogeschool_logo.6220cd57.svg",
-    "static/media/bensound-badass.8ef4f40c.mp3": "/x-reality/static/media/bensound-badass.8ef4f40c.mp3",
     "static/media/bensound-evolution.4375aef0.mp3": "/x-reality/static/media/bensound-evolution.4375aef0.mp3",
     "static/media/gltf-logo.d3501fc2.glb": "/x-reality/static/media/gltf-logo.d3501fc2.glb",
     "static/media/normals.c5aed970.glb": "/x-reality/static/media/normals.c5aed970.glb",
     "static/media/suzanne.a6e83718.glb": "/x-reality/static/media/suzanne.a6e83718.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.2237c0b8.js",
-    "static/js/2.3aaf91ac.chunk.js",
+    "static/js/runtime-main.119bb6d4.js",
+    "static/js/2.2476a67d.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
-    "static/js/main.f50c0a3d.chunk.js"
+    "static/js/main.2763e53d.chunk.js"
   ]
 }

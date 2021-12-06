@@ -3,10 +3,10 @@ import { useControls } from "leva";
 import Default from "./Default";
 import BakedNormals from "./BakedNormals";
 
-const TEXTURE = {
+const TEXTURE = Object.freeze({
   Default: "Default",
   BakedNormals: "BakedNormals",
-};
+});
 
 const Texture = () => {
   const { useTexture } = useControls("Components", {

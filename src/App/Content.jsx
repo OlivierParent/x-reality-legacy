@@ -29,7 +29,6 @@ import {
   Texture,
   Tripod,
   World,
-  WorldSound,
   Wouter,
   WouterPathRouter,
   WouterPathWouter,
@@ -98,7 +97,6 @@ const Content = () => {
     Texture: "Texture",
     Tripod: "Tripod",
     World: "World",
-    WorldSound: "WorldSound",
     Wouter: "Wouter",
   };
 
@@ -124,7 +122,6 @@ const Content = () => {
         "Texture               ": COMPONENT.Texture,
         "Tripod                ": COMPONENT.Tripod,
         "World                 ": COMPONENT.World,
-        "World (Sound)         ": COMPONENT.WorldSound,
         "Wouter (Router)       ": COMPONENT.Wouter,
       },
       value: COMPONENT.Suzanne,
@@ -198,11 +195,9 @@ const Content = () => {
           {enableComponent(COMPONENT.Spring) && <Spring />}
           {enableComponent(COMPONENT.Suzanne) && <Suzanne />}
           {enableComponent(COMPONENT.Texture) && <Texture />}
-          {enableComponent(COMPONENT.WorldSound) && <WorldSound />}
+          {enableComponent(COMPONENT.World) && <World />}
         </Suspense>
-
         {enableComponent(COMPONENT.Tripod) && <Tripod />}
-        {enableComponent(COMPONENT.World) && <World />}
         {enableComponent(COMPONENT.Wouter) && <Wouter />}
       </>
       <Route component={WouterPathRouter} path="/router" />

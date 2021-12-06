@@ -7,11 +7,11 @@ import StudioHelpers from "./StudioHelpers";
 import ThreePoint from "./ThreePoint";
 import ThreePointHelpers from "./ThreePointHelpers";
 
-const LIGHTING = {
+const LIGHTING = Object.freeze({
   Demo: "Demo",
   Studio: "Studio",
   ThreePoint: "ThreePoint",
-};
+});
 
 const Lighting = () => {
   const { useHelpers, useLighting } = useControls("Lightings", {

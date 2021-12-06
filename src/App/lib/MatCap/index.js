@@ -3,7 +3,7 @@
  * https://www.badking.com.au/site/product-category/materials/
  * https://www.zbrushcentral.com/t/matcap-repository/205029
  */
-const MatCap = {
+const MatCap = Object.freeze({
   // Index or ID string, see: https://github.com/emmelleppi/matcaps/
   id: {
     GREEN_CRYSTAL: "2E763A_78A0B7_B3D1CF_14F209", // https://github.com/emmelleppi/matcaps/blob/master/PAGE-3.md#2e763a_78a0b7_b3d1cf_14f209 https://pixologic.com/zbrush/downloadcenter/img/matcaps/images/erklaerbar/ok_green_crystal.jpg
@@ -20,6 +20,6 @@ const MatCap = {
     LG: 512,
     XL: 1024,
   },
-};
+});
 
 export default MatCap;

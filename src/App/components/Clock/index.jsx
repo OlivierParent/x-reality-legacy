@@ -3,10 +3,10 @@ import { useControls } from "leva";
 import Analogue from "./Analogue";
 import Digital from "./Digital";
 
-const CLOCK = {
+const CLOCK = Object.freeze({
   Analogue: "Analogue",
   Digital: "Digital",
-};
+});
 
 const Clock = () => {
   const { useClock } = useControls("Components", {

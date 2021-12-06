@@ -3,15 +3,15 @@ import { useControls } from "leva";
 import Default from "./Default";
 import Double from "./Double";
 
-const LOGO = {
+const LOGO = Object.freeze({
   Default: "Default",
   Double: "Double",
-};
+});
 
 const Image = () => {
   const { useLogo } = useControls("Components", {
     useLogo: {
-      label: "Variant",
+      label: "Logo",
       options: LOGO,
       value: LOGO.Default,
     },

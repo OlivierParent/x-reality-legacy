@@ -1,5 +1,4 @@
-import { MathUtils } from "three";
-import { Plane, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
 import suzanneGlb from "./suzanne.glb";
@@ -48,27 +47,20 @@ const SuzanneStandardMaterial = () => {
   });
 
   return (
-    <>
-      <mesh geometry={nodes.Suzanne.geometry}>
-        <meshStandardMaterial
-          color={color}
-          dithering={dithering}
-          emissive={emissive}
-          emissiveIntensity={emissiveIntensity}
-          metalness={metalness}
-          opacity={opacity}
-          refractionRatio={refractionRatio}
-          roughness={roughness}
-          transparent={transparent}
-          wireframe={wireframe}
-        />
-      </mesh>
-      <Plane
-        args={[2, 2]}
-        position={[0, 0, -1]}
-        rotation={[0, 0, 45].map((v) => MathUtils.degToRad(v))}
+    <mesh geometry={nodes.Suzanne.geometry}>
+      <meshStandardMaterial
+        color={color}
+        dithering={dithering}
+        emissive={emissive}
+        emissiveIntensity={emissiveIntensity}
+        metalness={metalness}
+        opacity={opacity}
+        refractionRatio={refractionRatio}
+        roughness={roughness}
+        transparent={transparent}
+        wireframe={wireframe}
       />
-    </>
+    </mesh>
   );
 };
 

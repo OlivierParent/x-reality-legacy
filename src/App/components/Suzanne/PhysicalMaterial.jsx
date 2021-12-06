@@ -1,5 +1,4 @@
-import { MathUtils } from "three";
-import { Plane, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
 import suzanneGlb from "./suzanne.glb";
@@ -20,10 +19,10 @@ const SuzannePhysicalMaterial = () => {
     refractionRatio,
     roughness,
     sheen,
+    sheenColor,
     sheenRoughness,
-    sheenTint,
+    specularColor,
     specularIntensity,
-    specularTint,
     thickness,
     transmission,
     transparent,
@@ -70,15 +69,15 @@ const SuzannePhysicalMaterial = () => {
         },
         reflectivity: { label: "Reflectivity", max: 1, min: 0, value: 0.5 },
         sheen: { label: "Sheen", max: 1, min: 0, value: 0 },
+        sheenColor: { label: "Sheen Color", value: "#ffffff" },
         sheenRoughness: { label: "Sheen Roughness", max: 1, min: 0, value: 1 },
-        sheenTint: { label: "Sheen Tint", value: "#ffffff" },
+        specularColor: { label: "Specular Color", value: "#ffffff" },
         specularIntensity: {
           label: "Specular Intensity",
           max: 1,
           min: 0,
           value: 1,
         },
-        specularTint: { label: "Specular Tint", value: "#ffffff" },
         thickness: { label: "Thickness", max: 10, min: 0, value: 0.01 },
         transmission: { label: "Transmission", max: 1, min: 0, value: 0 },
       }),
@@ -86,37 +85,30 @@ const SuzannePhysicalMaterial = () => {
   });
 
   return (
-    <>
-      <mesh geometry={nodes.Suzanne.geometry}>
-        <meshPhysicalMaterial
-          clearcoat={clearcoat}
-          clearcoatRoughness={clearcoatRoughness}
-          color={color}
-          dithering={dithering}
-          emissive={emissive}
-          emissiveIntensity={emissiveIntensity}
-          ior={ior}
-          metalness={metalness}
-          opacity={opacity}
-          refractionRatio={refractionRatio}
-          roughness={roughness}
-          sheen={sheen}
-          sheenRoughness={sheenRoughness}
-          sheenTint={sheenTint}
-          specularIntensity={specularIntensity}
-          specularTint={specularTint}
-          thickness={thickness}
-          transmission={transmission}
-          transparent={transparent}
-          wireframe={wireframe}
-        />
-      </mesh>
-      <Plane
-        args={[2, 2]}
-        position={[0, 0, -1]}
-        rotation={[0, 0, 45].map((v) => MathUtils.degToRad(v))}
+    <mesh geometry={nodes.Suzanne.geometry}>
+      <meshPhysicalMaterial
+        clearcoat={clearcoat}
+        clearcoatRoughness={clearcoatRoughness}
+        color={color}
+        dithering={dithering}
+        emissive={emissive}
+        emissiveIntensity={emissiveIntensity}
+        ior={ior}
+        metalness={metalness}
+        opacity={opacity}
+        refractionRatio={refractionRatio}
+        roughness={roughness}
+        sheen={sheen}
+        sheenColor={sheenColor}
+        sheenRoughness={sheenRoughness}
+        specularColor={specularColor}
+        specularIntensity={specularIntensity}
+        thickness={thickness}
+        transmission={transmission}
+        transparent={transparent}
+        wireframe={wireframe}
       />
-    </>
+    </mesh>
   );
 };
 

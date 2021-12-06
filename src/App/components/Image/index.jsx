@@ -3,10 +3,10 @@ import { useControls } from "leva";
 import Default from "./Default";
 import Svg from "./Svg";
 
-const IMAGE = {
+const IMAGE = Object.freeze({
   Default: "Default",
   Svg: "Svg",
-};
+});
 
 const Image = () => {
   const { useImage } = useControls("Components", {

@@ -1,10 +1,34 @@
-const FontFamily = {
-  Architects_Daughter:
-    "https://fonts.gstatic.com/s/architectsdaughter/v11/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvfY0.woff",
-  Press_Start_2P:
-    "https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK0nR.woff",
-  Roboto_Slab:
-    "https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaw.woff",
-};
+/**
+ * Only WOFF accepted, not WOFF2!
+ *
+ * https://fonts.google.com/
+ * Make a request with header `User-Agent`: `Mozilla/5.0 (MSIE 11.0)` and turn off automatic URL encoding.
+ */
+const FontFamily = Object.freeze({
+  ARCHITECTS_DAUGHTER: {
+    name: "Architects Daughter",
+    url: "https://fonts.gstatic.com/s/architectsdaughter/v11/KtkxAKiDZI_td1Lkx62xHZHDtgO_Y-bvfY0.woff",
+  },
+  PRESS_START_2P: {
+    name: "Press Start 2P",
+    url: "https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK0nR.woff",
+  },
+  REDACTED_SCRIPT: {
+    name: "Redacted Script",
+    url: "https://fonts.gstatic.com/s/redactedscript/v1/ypvBbXGRglhokR7dcC3d1-R6zmxitm72.woff",
+  },
+  ROBOTO: {
+    name: "Roboto",
+    url: "https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxM.woff",
+  },
+  ROBOTO_SLAB: {
+    name: "Roboto Slab",
+    url: "https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSWaw.woff",
+  },
+  TANGERINE: {
+    name: "Tangerine",
+    url: "https://fonts.gstatic.com/s/tangerine/v12/IurY6Y5j_oScZZow4VOBDQ.woff",
+  },
+});
 
 export default FontFamily;

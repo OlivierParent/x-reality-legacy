@@ -3,10 +3,10 @@ import { useControls } from "leva";
 import Default from "./Default";
 import Spring from "./Spring";
 
-const BUTTON = {
+const BUTTON = Object.freeze({
   Default: "Default",
   Spring: "Spring",
-};
+});
 
 const Button = () => {
   const { useButton } = useControls("Components", {
