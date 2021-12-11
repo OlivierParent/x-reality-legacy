@@ -1165,7 +1165,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.6", "@babel/runtime@^7.16.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.6", "@babel/runtime@^7.16.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.16.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
   integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
@@ -1786,10 +1786,10 @@
     cannon-es "^0.18.0"
     cannon-es-debugger "^0.1.4"
 
-"@react-three/drei@^7.26.1":
-  version "7.26.1"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.26.1.tgz#febf0b2520457b0b15d772bf3e9176baca9ab77c"
-  integrity sha512-Xcbtc8b0u/jzHV2LHmytWx8yDz213NtpGVLieJAZC0n3y6BdxcE6S94Hg/pwi2YDIIH6XgHYFO7lhM9K3tY4pg==
+"@react-three/drei@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.0.0.tgz#94f357f27a89cc2930e7dad965e50e9bb6653395"
+  integrity sha512-2KTMvsdWW0gzordu69n2MgJt4tSIcsX8ZNoXhIbtCXHO4SuhLokw/YxsXSuvEaIAefUT0FmYddQjB0hm2HmETg==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/three" "^9.3.1"
@@ -1808,10 +1808,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@^7.0.21":
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.21.tgz#a34c3d85c8c1074e3bbc341640cf38567d2f791d"
-  integrity sha512-hs+5y6Z8ZQcWGzZN8kMRmSRbztozuQj8tvU22IHshFSq2p23JIFwiSy/z+WYSVWrAvOCRo1NxVvOFC6XI4X3hQ==
+"@react-three/fiber@^7.0.23":
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.23.tgz#427de49ae0a7c814f026a4ab8b8b631a71404a83"
+  integrity sha512-3m8Plk0le0r6kzklmvaThK/pyyw4f8LLzMsUOP4IG7CzRhhZH8Dunso3wJkfMWa0rjFAmWjFkGttetAbuovnnw==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -1839,10 +1839,10 @@
     postprocessing "^6.22.2"
     react-merge-refs "^1.1.0"
 
-"@react-three/test-renderer@^7.0.20":
-  version "7.0.20"
-  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.20.tgz#3a0cb11cb23f81d2cb11f62373b9c8f20b60e79b"
-  integrity sha512-pw8r5664+XACpNBai7k7eZc9HuKaI7iB2zPEoAOkLFQFoEvj0luggAUGjU/9sVr+BfdbvsvcbrqBIKYqmVCM/g==
+"@react-three/test-renderer@^7.0.22":
+  version "7.0.22"
+  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.22.tgz#876e6ed86bc5a3234346ff88ded458c8ce7835f2"
+  integrity sha512-txSsBWY3snlFMbKv69SaQSHf8pN3XdT01Z3iQeI5G5kxjPXvTVf9JWvq7yoj9iu8JQvAIcwYOubJ1Hhi5GROEA==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"
@@ -5986,6 +5986,13 @@ hex-color-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
   integrity sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ==
 
+history@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/history/-/history-5.1.0.tgz#2e93c09c064194d38d52ed62afd0afc9d9b01ece"
+  integrity sha512-zPuQgPacm2vH2xdORvGGz1wQMuHSIB56yNAy5FnLuwOwgSYyPKptJtcMm6Ev+hRGeS+GzhbmRacHzvlESbFwDg==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
 hmac-drbg@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -9732,6 +9739,21 @@ react-refresh@^0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-router-dom@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.1.1.tgz#ed59376ff9115bc49227e87982a32e91e9530ca3"
+  integrity sha512-O3UH89DI4o+swd2q6lF4dSmpuNCxwkUXcj0zAFcVc1H+YoPE6T7uwoFMX0ws1pUvCY8lYDucFpOqCCdal6VFzg==
+  dependencies:
+    history "^5.1.0"
+    react-router "6.1.1"
+
+react-router@6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.1.1.tgz#16f41bf54e87d995bcd4d447720a693f77d8fcb9"
+  integrity sha512-55o96RiDZmC0uD17DPqVmzzfdNd2Dc+EjkYvMAmHl43du/GItaTdFr5WwjTryNWPXZ+OOVQxQhwAX25UwxpHtw==
+  dependencies:
+    history "^5.1.0"
+
 react-scripts@4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-4.0.3.tgz#b1cafed7c3fa603e7628ba0f187787964cb5d345"
@@ -12093,11 +12115,6 @@ worker-rpc@^0.1.0:
   integrity sha512-P1WjMrUB3qgJNI9jfmpZ/htmBEjFh//6l/5y8SD9hg1Ef5zTTVVoRjTrTEzPrNBQvmhMxkoTsjOXN10GWU7aCg==
   dependencies:
     microevent.ts "~0.1.1"
-
-wouter@^2.8.0-alpha.2:
-  version "2.8.0-alpha.2"
-  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.8.0-alpha.2.tgz#d57dfbd23b964b8bd848f2ed3eb2b38cf3c00e00"
-  integrity sha512-aPsL5m5rW9RiceClOmGj6t5gn9Ut2TJVr98UDi1u9MIRNYiYVflg6vFIjdDYJ4IAyH0JdnkSgGwfo0LQS3k2zg==
 
 wrap-ansi@^5.1.0:
   version "5.1.0"

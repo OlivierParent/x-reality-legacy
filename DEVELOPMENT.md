@@ -23,7 +23,9 @@
 - [React Spring](https://react-spring.io/)
   - [Documentation](https://docs.pmnd.rs/react-spring)
   - [GitHub](https://github.com/pmndrs/react-spring)
-
+- [React Router](https://reactrouter.com/)
+  - [Documentation](https://reactrouter.com/docs/)
+  - [GitHub](https://github.com/remix-run/react-router)
 
 ## Installation
 
@@ -39,4 +41,4 @@
       $ yarn add react-spring
       $ yarn add socket.io-client
       $ yarn add three three-stdlib
-      $ yarn add wouter
+      $ yarn add react-router-dom

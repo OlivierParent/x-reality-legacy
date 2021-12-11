@@ -1,5 +1,10 @@
-import { Suspense, useCallback, useEffect, useState } from "react";
-import { Route, Router } from "wouter";
+import { Suspense } from "react";
+import {
+  HashRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
 import { MathUtils } from "three";
 import {
   GizmoHelper,
@@ -29,24 +34,10 @@ import {
   Texture,
   Tripod,
   World,
-  Wouter,
-  WouterPathRouter,
-  WouterPathWouter,
+  ReactRouter,
+  ReactRouterPathAlpha,
+  ReactRouterPathOmega,
 } from "./components";
-
-const currentLocation = () => window.location.hash.replace("#", "") || "/";
-const useHashLocation = () => {
-  const [location, setLocation] = useState(currentLocation());
-
-  useEffect(() => {
-    const handler = () => setLocation(currentLocation());
-    window.addEventListener("hashchange", handler);
-    return () => window.removeEventListener("hashchange", handler);
-  }, []);
-
-  const navigate = useCallback((to) => (window.location.hash = to), []);
-  return [location, navigate];
-};
 
 const COMPONENT = Object.freeze({
   Animation: "Animation",
@@ -61,13 +52,13 @@ const COMPONENT = Object.freeze({
   LoremIpsum: "LoremIpsum",
   None: "None",
   Normals: "Normals",
+  ReactRouter: "ReactRouter",
   Socket: "Socket",
   Spring: "Spring",
   Suzanne: "Suzanne",
   Texture: "Texture",
   Tripod: "Tripod",
   World: "World",
-  Wouter: "Wouter",
 });
 
 const CONTROLS = Object.freeze({
@@ -116,13 +107,13 @@ const Content = () => {
         "Logo                  ": COMPONENT.Logo,
         "Lorem Ipsum           ": COMPONENT.LoremIpsum,
         "Normals               ": COMPONENT.Normals,
+        "ReactRouter           ": COMPONENT.ReactRouter,
         "Socket (Socket.IO 4.4)": COMPONENT.Socket,
         "Spring                ": COMPONENT.Spring,
         "Suzanne               ": COMPONENT.Suzanne,
         "Texture               ": COMPONENT.Texture,
         "Tripod                ": COMPONENT.Tripod,
         "World                 ": COMPONENT.World,
-        "Wouter (Router)       ": COMPONENT.Wouter,
       },
       value: COMPONENT.Suzanne,
     },
@@ -137,7 +128,7 @@ const Content = () => {
   }
 
   return (
-    <Router base={process.env.PUBLIC_URL} hook={useHashLocation}>
+    <>
       <>
         {enableInputControls(CONTROLS.Orbit) && (
           <OrbitControls
@@ -171,7 +162,7 @@ const Content = () => {
         </EffectComposer>
       )}
       <Lighting />
-      <>
+      <Router>
         {enableComponent(COMPONENT.Button) && <Button />}
         {enableComponent(COMPONENT.Cube) && <Cube />}
         {enableComponent(COMPONENT.Cube_Positioned) && (
@@ -184,6 +175,7 @@ const Content = () => {
         )}
         {enableComponent(COMPONENT.Face) && <Face />}
         {enableComponent(COMPONENT.Gauge) && <Gauge />}
+        {enableComponent(COMPONENT.ReactRouter) && <ReactRouter />}
         {enableComponent(COMPONENT.Socket) && <Socket />}
         <Suspense fallback={null}>
           {enableComponent(COMPONENT.Animation) && <Animation />}
@@ -198,11 +190,15 @@ const Content = () => {
           {enableComponent(COMPONENT.World) && <World />}
         </Suspense>
         {enableComponent(COMPONENT.Tripod) && <Tripod />}
-        {enableComponent(COMPONENT.Wouter) && <Wouter />}
-      </>
-      <Route component={WouterPathRouter} path="/router" />
-      <Route component={WouterPathWouter} path="/wouter" />
-    </Router>
+
+        <Routes>
+          <Route element={<Navigate to="/" />} path="*" />
+          <Route element={<ReactRouterPathAlpha />} path="alpha" />
+          <Route element={<ReactRouterPathOmega />} path="omega" />
+          <Route element={<></>} path="/" />
+        </Routes>
+      </Router>
+    </>
   );
 };
 
