@@ -31,7 +31,13 @@ const SuzannePhysicalMaterial = () => {
     Materials: folder({
       Material: folder({
         dithering: { label: "Dithering", value: false },
-        opacity: { label: "Transparent", max: 1, min: 0, value: 1 },
+        opacity: {
+          label: "Opacity",
+          hint: "`transparent` must be `true`",
+          max: 1,
+          min: 0,
+          value: 1,
+        },
         transparent: { label: "Transparent", value: true },
       }),
       "Standard Material": folder({

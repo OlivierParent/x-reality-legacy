@@ -49,10 +49,12 @@ const Suzanne = () => {
         {enableSuzanne(SUZANNE.ToonMaterial) && <ToonMaterial />}
       </>
       <Plane
-        args={[2, 2]}
-        position={[0, 0, -1]}
+        args={[4, 4]}
+        position={[0, 0, -1.5]}
         rotation={[0, 0, 45].map((v) => MathUtils.degToRad(v))}
-      />
+      >
+        <meshBasicMaterial opacity={0.05} transparent={true} />
+      </Plane>
     </>
   );
 };

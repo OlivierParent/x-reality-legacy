@@ -28,15 +28,16 @@ import {
   Logo,
   LoremIpsum,
   Normals,
+  Particles,
+  ReactRouter,
+  ReactRouterPathAlpha,
+  ReactRouterPathOmega,
   Socket,
   Spring,
   Suzanne,
   Texture,
   Tripod,
   World,
-  ReactRouter,
-  ReactRouterPathAlpha,
-  ReactRouterPathOmega,
 } from "./components";
 
 const COMPONENT = Object.freeze({
@@ -52,6 +53,7 @@ const COMPONENT = Object.freeze({
   LoremIpsum: "LoremIpsum",
   None: "None",
   Normals: "Normals",
+  Particles: "Particles",
   ReactRouter: "ReactRouter",
   Socket: "Socket",
   Spring: "Spring",
@@ -107,6 +109,7 @@ const Content = () => {
         "Logo                  ": COMPONENT.Logo,
         "Lorem Ipsum           ": COMPONENT.LoremIpsum,
         "Normals               ": COMPONENT.Normals,
+        "Particles             ": COMPONENT.Particles,
         "ReactRouter           ": COMPONENT.ReactRouter,
         "Socket (Socket.IO 4.4)": COMPONENT.Socket,
         "Spring                ": COMPONENT.Spring,
@@ -184,6 +187,7 @@ const Content = () => {
           {enableComponent(COMPONENT.Logo) && <Logo />}
           {enableComponent(COMPONENT.LoremIpsum) && <LoremIpsum />}
           {enableComponent(COMPONENT.Normals) && <Normals />}
+          {enableComponent(COMPONENT.Particles) && <Particles />}
           {enableComponent(COMPONENT.Spring) && <Spring />}
           {enableComponent(COMPONENT.Suzanne) && <Suzanne />}
           {enableComponent(COMPONENT.Texture) && <Texture />}

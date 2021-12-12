@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/x-reality/static/css/main.36a7e8b9.chunk.css",
-    "main.js": "/x-reality/static/js/main.0ed21659.chunk.js",
-    "main.js.map": "/x-reality/static/js/main.0ed21659.chunk.js.map",
+    "main.js": "/x-reality/static/js/main.7d0ed4b8.chunk.js",
+    "main.js.map": "/x-reality/static/js/main.7d0ed4b8.chunk.js.map",
     "runtime-main.js": "/x-reality/static/js/runtime-main.2237c0b8.js",
     "runtime-main.js.map": "/x-reality/static/js/runtime-main.2237c0b8.js.map",
     "static/js/2.581bab0f.chunk.js": "/x-reality/static/js/2.581bab0f.chunk.js",
@@ -12,6 +12,7 @@
     "index.html": "/x-reality/index.html",
     "static/css/main.36a7e8b9.chunk.css.map": "/x-reality/static/css/main.36a7e8b9.chunk.css.map",
     "static/js/2.581bab0f.chunk.js.LICENSE.txt": "/x-reality/static/js/2.581bab0f.chunk.js.LICENSE.txt",
+    "static/media/Arteveldehogeschool_favicon.209a12d1.png": "/x-reality/static/media/Arteveldehogeschool_favicon.209a12d1.png",
     "static/media/BakedNormals.03580610.glb": "/x-reality/static/media/BakedNormals.03580610.glb",
     "static/media/SVG_logo.e87754b4.svg": "/x-reality/static/media/SVG_logo.e87754b4.svg",
     "static/media/TexturedCube.2b78eebc.glb": "/x-reality/static/media/TexturedCube.2b78eebc.glb",
@@ -27,6 +28,6 @@
     "static/js/runtime-main.2237c0b8.js",
     "static/js/2.581bab0f.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
-    "static/js/main.0ed21659.chunk.js"
+    "static/js/main.7d0ed4b8.chunk.js"
   ]
 }
