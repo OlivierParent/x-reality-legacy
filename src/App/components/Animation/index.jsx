@@ -3,7 +3,7 @@ import { AnimationMixer } from "three";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-import animationGlb from "./animation.glb";
+import animationGlb from "./assets/animation.glb";
 
 const Animation = () => {
   const { animations, scene } = useGLTF(animationGlb, true);

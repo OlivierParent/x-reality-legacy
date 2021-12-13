@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 
-import cubeGlb from "./TexturedCube.glb";
+import cubeGlb from "./assets/TexturedCube.glb";
 
 const TextureDefault = () => {
   const { nodes, materials } = useGLTF(cubeGlb, true);

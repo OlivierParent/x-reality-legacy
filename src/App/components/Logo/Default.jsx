@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-import gltfLogoGlb from "./gltf-logo.glb";
+import gltfLogoGlb from "./assets/gltf-logo.glb";
 
 const LogoDefault = () => {
   const [clockwise, setClockwise] = useState(false);

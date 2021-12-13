@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
-import suzanneGlb from "./suzanne.glb";
+import suzanneGlb from "./assets/suzanne.glb";
 
 const SuzannePhysicalMaterial = () => {
   const { nodes } = useGLTF(suzanneGlb, true);

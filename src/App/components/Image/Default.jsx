@@ -1,7 +1,7 @@
 import { DoubleSide, Vector2 } from "three";
 import { useTexture } from "@react-three/drei";
 
-import uvGrid from "./UV_Grid_Sm.jpg";
+import uvGrid from "./assets/UV_Grid_Sm.jpg";
 
 const ImageDefault = () => {
   const texture = useTexture(uvGrid, true);

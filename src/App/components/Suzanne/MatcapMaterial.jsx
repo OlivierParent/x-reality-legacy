@@ -1,7 +1,7 @@
 import { useGLTF, useMatcapTexture } from "@react-three/drei";
 import { MatCap } from "App/lib";
 
-import suzanneGlb from "./suzanne.glb";
+import suzanneGlb from "./assets/suzanne.glb";
 
 const SuzanneMatcapMaterial = () => {
   const { nodes } = useGLTF(suzanneGlb, true);

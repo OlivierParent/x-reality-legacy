@@ -1,7 +1,7 @@
 import { useTexture } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
-import particleImage from "./Arteveldehogeschool_favicon.png";
+import particleImage from "./assets/Arteveldehogeschool_favicon.png";
 
 const ParticlesSprites = () => {
   const { color, complexity, opacity, radius, size, transparent } = useControls(

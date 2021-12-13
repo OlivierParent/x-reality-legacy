@@ -1786,10 +1786,10 @@
     cannon-es "^0.18.0"
     cannon-es-debugger "^0.1.4"
 
-"@react-three/drei@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.0.0.tgz#94f357f27a89cc2930e7dad965e50e9bb6653395"
-  integrity sha512-2KTMvsdWW0gzordu69n2MgJt4tSIcsX8ZNoXhIbtCXHO4SuhLokw/YxsXSuvEaIAefUT0FmYddQjB0hm2HmETg==
+"@react-three/drei@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.1.0.tgz#fac9f16933ab85bff8250593b0670875ba731f6b"
+  integrity sha512-YFFRb+e8TzZwbIbPEMZvgYQbq67S1TyfCUXJ3zXinP8OEJ5LgvESLplM+1FGg0jiiwPSzX52UvbLwtKCf2TGow==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/three" "^9.3.1"
@@ -1808,10 +1808,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@^7.0.23":
-  version "7.0.23"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.23.tgz#427de49ae0a7c814f026a4ab8b8b631a71404a83"
-  integrity sha512-3m8Plk0le0r6kzklmvaThK/pyyw4f8LLzMsUOP4IG7CzRhhZH8Dunso3wJkfMWa0rjFAmWjFkGttetAbuovnnw==
+"@react-three/fiber@^7.0.24":
+  version "7.0.24"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.24.tgz#f3a40326e233e4a1c95b3bb5384ff19c81412958"
+  integrity sha512-CJi1Mex7jqByTEVZoUzg0xZEw63CUjm4bUDx0XIhuAmNUsmFmht7cRt87zUQSSDQvmaDqvoDWW7dD+uFJW/kUQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -1839,10 +1839,10 @@
     postprocessing "^6.22.2"
     react-merge-refs "^1.1.0"
 
-"@react-three/test-renderer@^7.0.22":
-  version "7.0.22"
-  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.22.tgz#876e6ed86bc5a3234346ff88ded458c8ce7835f2"
-  integrity sha512-txSsBWY3snlFMbKv69SaQSHf8pN3XdT01Z3iQeI5G5kxjPXvTVf9JWvq7yoj9iu8JQvAIcwYOubJ1Hhi5GROEA==
+"@react-three/test-renderer@^7.0.23":
+  version "7.0.23"
+  resolved "https://registry.yarnpkg.com/@react-three/test-renderer/-/test-renderer-7.0.23.tgz#99c5ce017083ab11e4198b6a614f5cc2fce0f9da"
+  integrity sha512-4PArFTVuMI+7Pg5hnCliaTU25e7k4xR76yCI+P09u1H9G9xINiKYxgGmbyTvYwtZkTRQhOE62HYYgmX62Nb8qg==
 
 "@rollup/plugin-node-resolve@^7.1.1":
   version "7.1.3"

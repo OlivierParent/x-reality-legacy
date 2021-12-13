@@ -1,7 +1,7 @@
 import { SvgLoader } from "App/components";
 
-import logoNl from "./arteveldehogeschool_logo.svg";
-import svgLogo from "./SVG_logo.svg";
+import logoNl from "./assets/arteveldehogeschool_logo.svg";
+import svgLogo from "./assets/SVG_logo.svg";
 
 const svgLogoUrl =
   "https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg";

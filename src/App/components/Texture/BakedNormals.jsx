@@ -1,7 +1,7 @@
 import { MathUtils } from "three";
 import { useGLTF } from "@react-three/drei";
 
-import cubeGlb from "./BakedNormals.glb";
+import cubeGlb from "./assets/BakedNormals.glb";
 
 const TextureBakedNormals = () => {
   const { nodes, materials } = useGLTF(cubeGlb, true);

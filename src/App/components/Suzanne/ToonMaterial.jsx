@@ -1,6 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 
-import suzanneGlb from "./suzanne.glb";
+import suzanneGlb from "./assets/suzanne.glb";
 
 const SuzanneToonMaterial = () => {
   const { nodes } = useGLTF(suzanneGlb, true);

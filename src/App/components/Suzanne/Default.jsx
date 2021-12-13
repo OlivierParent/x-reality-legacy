@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 
-import suzanneGlb from "./suzanne.glb";
+import suzanneGlb from "./assets/suzanne.glb";
 
 const SuzanneDefault = () => {
   const [clockwise, setClockwise] = useState(false);
