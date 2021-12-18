@@ -17,14 +17,14 @@ const LoremIpsum = () => {
     },
   });
 
-  function enableLoremIpsum(name) {
-    return useLoremIpsum === name;
+  function enableLoremIpsum(name, element) {
+    return useLoremIpsum === name ? element : null;
   }
 
   return (
     <>
-      {enableLoremIpsum(LOREM_IPSUM.Default) && <Default />}
-      {enableLoremIpsum(LOREM_IPSUM.Fonts) && <Fonts />}
+      {enableLoremIpsum(LOREM_IPSUM.Default, <Default />)}
+      {enableLoremIpsum(LOREM_IPSUM.Fonts, <Fonts />)}
     </>
   );
 };

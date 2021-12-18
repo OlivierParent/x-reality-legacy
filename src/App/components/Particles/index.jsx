@@ -17,14 +17,14 @@ const Particles = () => {
     },
   });
 
-  function enableParticles(name) {
-    return useParticles === name;
+  function enableParticles(name, element) {
+    return useParticles === name ? element : null;
   }
 
   return (
     <>
-      {enableParticles(PARTICLES.Default) && <Default />}
-      {enableParticles(PARTICLES.Sprites) && <Sprites />}
+      {enableParticles(PARTICLES.Default, <Default />)}
+      {enableParticles(PARTICLES.Sprites, <Sprites />)}
     </>
   );
 };

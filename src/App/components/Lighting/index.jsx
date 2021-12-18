@@ -1,49 +1,49 @@
 import { useControls } from "leva";
 
 import Demo from "./Demo";
-import DemoHelpers from "./DemoHelpers";
 import Studio from "./Studio";
-import StudioHelpers from "./StudioHelpers";
 import ThreePoint from "./ThreePoint";
-import ThreePointHelpers from "./ThreePointHelpers";
 
 const LIGHTING = Object.freeze({
   Demo: "Demo",
+  None: "None",
   Studio: "Studio",
   ThreePoint: "ThreePoint",
 });
 
+function enableLighting(name) {
+  let element;
+  switch (name) {
+    case LIGHTING.Demo:
+      element = <Demo />;
+      break;
+    case LIGHTING.Studio:
+      element = <Studio />;
+      break;
+    case LIGHTING.ThreePoint:
+      element = <ThreePoint />;
+      break;
+    default:
+      element = null;
+  }
+  return element;
+}
+
 const Lighting = () => {
-  const { useHelpers, useLighting } = useControls("Lightings", {
-    useLighting: {
+  const { ligthingName } = useControls("Lightings", {
+    ligthingName: {
       label: "Lighting",
       options: {
+        "None       ": LIGHTING.None,
         "Demo       ": LIGHTING.Demo,
         "Studio     ": LIGHTING.Studio,
         "Three Point": LIGHTING.ThreePoint,
       },
       value: LIGHTING.Studio,
     },
-    useHelpers: {
-      label: "Helpers",
-      value: false,
-    },
   });
 
-  function enableLighting(name, helpers = false) {
-    return useLighting === name && useHelpers === helpers;
-  }
-
-  return (
-    <>
-      {enableLighting(LIGHTING.Demo) && <Demo />}
-      {enableLighting(LIGHTING.Demo, true) && <DemoHelpers />}
-      {enableLighting(LIGHTING.Studio) && <Studio />}
-      {enableLighting(LIGHTING.Studio, true) && <StudioHelpers />}
-      {enableLighting(LIGHTING.ThreePoint) && <ThreePoint />}
-      {enableLighting(LIGHTING.ThreePoint, true) && <ThreePointHelpers />}
-    </>
-  );
+  return enableLighting(ligthingName);
 };
 
 export default Lighting;

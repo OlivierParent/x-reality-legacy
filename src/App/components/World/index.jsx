@@ -19,15 +19,15 @@ const World = () => {
     },
   });
 
-  function enableWorld(name) {
-    return useWorld === name;
+  function enableWorld(name, element) {
+    return useWorld === name ? element : null;
   }
 
   return (
     <>
-      {enableWorld(WORLD.Default) && <Default />}
-      {/* {enableWorld(WORLD.PositionalSound) && <PositionalSound />} */}
-      {enableWorld(WORLD.Sound) && <Sound />}
+      {enableWorld(WORLD.Default, <Default />)}
+      {/* {enableWorld(WORLD.PositionalSound, <PositionalSound />)} */}
+      {enableWorld(WORLD.Sound, <Sound />)}
     </>
   );
 };

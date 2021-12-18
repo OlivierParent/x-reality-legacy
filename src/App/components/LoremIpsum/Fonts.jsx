@@ -1,7 +1,7 @@
 import { Text } from "@react-three/drei";
 import { useControls } from "leva";
 
-import { FontFamily } from "App/lib";
+import { FontFamily } from "App/libs";
 
 const length = Object.keys(FontFamily).length;
 

@@ -17,14 +17,14 @@ const Image = () => {
     },
   });
 
-  function enableImage(name) {
-    return useImage === name;
+  function enableImage(name, element) {
+    return useImage === name ? element : null;
   }
 
   return (
     <>
-      {enableImage(IMAGE.Default) && <Default />}
-      {enableImage(IMAGE.Svg) && <Svg />}
+      {enableImage(IMAGE.Default, <Default />)}
+      {enableImage(IMAGE.Svg, <Svg />)}
     </>
   );
 };

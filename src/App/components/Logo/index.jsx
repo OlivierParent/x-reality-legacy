@@ -17,14 +17,14 @@ const Image = () => {
     },
   });
 
-  function enableLogo(name) {
-    return useLogo === name;
+  function enableLogo(name, element) {
+    return useLogo === name ? element : null;
   }
 
   return (
     <>
-      {enableLogo(LOGO.Default) && <Default />}
-      {enableLogo(LOGO.Double) && <Double />}
+      {enableLogo(LOGO.Default, <Default />)}
+      {enableLogo(LOGO.Double, <Double />)}
     </>
   );
 };

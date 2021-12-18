@@ -1,7 +1,7 @@
 import { Text, useMatcapTexture } from "@react-three/drei";
 import { useControls } from "leva";
 
-import { FontFamily, MatCap } from "App/lib";
+import { FontFamily, MatCap } from "App/libs";
 
 const LoremIpsumDefault = () => {
   const { size, string } = useControls("Components", {

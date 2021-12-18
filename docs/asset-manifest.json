@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/x-reality/static/css/main.36a7e8b9.chunk.css",
-    "main.js": "/x-reality/static/js/main.7d0ed4b8.chunk.js",
-    "main.js.map": "/x-reality/static/js/main.7d0ed4b8.chunk.js.map",
-    "runtime-main.js": "/x-reality/static/js/runtime-main.2237c0b8.js",
-    "runtime-main.js.map": "/x-reality/static/js/runtime-main.2237c0b8.js.map",
-    "static/js/2.581bab0f.chunk.js": "/x-reality/static/js/2.581bab0f.chunk.js",
-    "static/js/2.581bab0f.chunk.js.map": "/x-reality/static/js/2.581bab0f.chunk.js.map",
-    "static/js/3.15dfd57c.chunk.js": "/x-reality/static/js/3.15dfd57c.chunk.js",
-    "static/js/3.15dfd57c.chunk.js.map": "/x-reality/static/js/3.15dfd57c.chunk.js.map",
+    "main.js": "/x-reality/static/js/main.7d309f29.chunk.js",
+    "main.js.map": "/x-reality/static/js/main.7d309f29.chunk.js.map",
+    "runtime-main.js": "/x-reality/static/js/runtime-main.64e70139.js",
+    "runtime-main.js.map": "/x-reality/static/js/runtime-main.64e70139.js.map",
+    "static/js/2.d2cfd30d.chunk.js": "/x-reality/static/js/2.d2cfd30d.chunk.js",
+    "static/js/2.d2cfd30d.chunk.js.map": "/x-reality/static/js/2.d2cfd30d.chunk.js.map",
+    "static/js/3.0e6bbb90.chunk.js": "/x-reality/static/js/3.0e6bbb90.chunk.js",
+    "static/js/3.0e6bbb90.chunk.js.map": "/x-reality/static/js/3.0e6bbb90.chunk.js.map",
     "index.html": "/x-reality/index.html",
     "static/css/main.36a7e8b9.chunk.css.map": "/x-reality/static/css/main.36a7e8b9.chunk.css.map",
-    "static/js/2.581bab0f.chunk.js.LICENSE.txt": "/x-reality/static/js/2.581bab0f.chunk.js.LICENSE.txt",
+    "static/js/2.d2cfd30d.chunk.js.LICENSE.txt": "/x-reality/static/js/2.d2cfd30d.chunk.js.LICENSE.txt",
     "static/media/Arteveldehogeschool_favicon.209a12d1.png": "/x-reality/static/media/Arteveldehogeschool_favicon.209a12d1.png",
     "static/media/BakedNormals.03580610.glb": "/x-reality/static/media/BakedNormals.03580610.glb",
     "static/media/SVG_logo.e87754b4.svg": "/x-reality/static/media/SVG_logo.e87754b4.svg",
@@ -25,9 +25,9 @@
     "static/media/suzanne.f8d5e374.glb": "/x-reality/static/media/suzanne.f8d5e374.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.2237c0b8.js",
-    "static/js/2.581bab0f.chunk.js",
+    "static/js/runtime-main.64e70139.js",
+    "static/js/2.d2cfd30d.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
-    "static/js/main.7d0ed4b8.chunk.js"
+    "static/js/main.7d309f29.chunk.js"
   ]
 }

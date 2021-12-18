@@ -8,7 +8,7 @@ const Tripod = (props) => {
     <group {...props}>
       <mesh>
         <boxGeometry args={[1, 1, 1].map((value) => value * 1.5 * thickness)} />
-        <meshMatcapMaterial color={0xffffff} />
+        <meshBasicMaterial color={0xffffff} />
       </mesh>
 
       {Array(3)
@@ -27,7 +27,7 @@ const Tripod = (props) => {
                     (v, i) => v * (index === i ? length : thickness)
                   )}
                 />
-                <meshMatcapMaterial color={0xff0000 >> (8 * index)} />
+                <meshBasicMaterial color={0xff0000 >> (8 * index)} />
               </mesh>
               <mesh
                 position={[0, 0, 0].map((v, i) =>
@@ -35,7 +35,7 @@ const Tripod = (props) => {
                 )}
               >
                 <sphereGeometry args={[radius, segments, segments]} />
-                <meshMatcapMaterial color={0xffffff} />
+                <meshBasicMaterial color={0xffffff} />
               </mesh>
             </group>
           );

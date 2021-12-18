@@ -17,14 +17,14 @@ const Button = () => {
     },
   });
 
-  function enableButton(name) {
-    return useButton === name;
+  function enableButton(name, element) {
+    return useButton === name ? element : null;
   }
 
   return (
     <>
-      {enableButton(BUTTON.Default) && <Default />}
-      {enableButton(BUTTON.Spring) && <Spring />}
+      {enableButton(BUTTON.Default, <Default />)}
+      {enableButton(BUTTON.Spring, <Spring />)}
     </>
   );
 };

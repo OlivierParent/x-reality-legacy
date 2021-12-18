@@ -17,14 +17,14 @@ const Clock = () => {
     },
   });
 
-  const enableClock = (name) => {
-    return useClock === name;
-  };
+  function enableClock(name, element) {
+    return useClock === name ? element : null;
+  }
 
   return (
     <>
-      {enableClock(CLOCK.Analogue) && <Analogue />}
-      {enableClock(CLOCK.Digital) && <Digital />}
+      {enableClock(CLOCK.Analogue, <Analogue />)}
+      {enableClock(CLOCK.Digital, <Digital />)}
     </>
   );
 };

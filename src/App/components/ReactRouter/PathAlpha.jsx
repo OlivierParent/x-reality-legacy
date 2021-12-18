@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Text } from "@react-three/drei";
 
+import { ROUTES } from "./ROUTES";
+
 const WouterPathRouter = () => {
   const navigate = useNavigate();
   const [hover, setHover] = useState(false);
@@ -10,7 +12,7 @@ const WouterPathRouter = () => {
     <Text
       color={hover ? "hsl(0, 100%, 50%)" : "hsl(210, 100%, 70%)"}
       fontSize={0.5}
-      onClick={() => navigate("/omega")}
+      onClick={() => navigate(ROUTES.Omega)}
       onPointerOut={() => setHover(false)}
       onPointerOver={() => setHover(true)}
       position={[0, 2, 0]}

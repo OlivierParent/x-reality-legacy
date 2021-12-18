@@ -1,35 +1,45 @@
-import { useRef, useState } from "react";
-import { useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
+import { VertexNormalsHelper } from "three-stdlib";
+import { useGLTF, useHelper } from "@react-three/drei";
+import { useControls } from "leva";
 
 import suzanneGlb from "./assets/suzanne.glb";
 
 const SuzanneDefault = () => {
-  const [clockwise, setClockwise] = useState(false);
-  const [rotate, setRotate] = useState(false);
   const { nodes, materials } = useGLTF(suzanneGlb, true);
-  const objectRef = useRef();
-  const speed = 0.025;
+  const suzanneRef = useRef();
 
-  useFrame(() => {
-    if (objectRef.current) {
-      objectRef.current.rotation.x +=
-        speed * (rotate ? 1 : 0) * (clockwise ? 1 : -1);
-      objectRef.current.rotation.y +=
-        speed * (rotate ? 1 : 0) * (clockwise ? 1 : -1);
-      objectRef.current.rotation.z +=
-        speed * (rotate ? 1 : 0) * (clockwise ? 1 : -1);
+  const { normalColor, enableVertexNormalsHelper, helperSize } = useControls(
+    "Components",
+    {
+      enableVertexNormalsHelper: {
+        label: "Normals",
+        value: false,
+      },
+      normalColor: { label: "Normal Color", value: "cyan" },
+      helperSize: {
+        label: "Helper Size",
+        max: 2,
+        min: 0,
+        step: 0.05,
+        value: 0.25,
+      },
     }
-  });
+  );
+
+  useHelper(
+    enableVertexNormalsHelper ? suzanneRef : { current: null },
+    VertexNormalsHelper,
+    helperSize,
+    normalColor
+  );
 
   return (
-    <group
-      ref={objectRef}
-      onClick={() => setClockwise(!clockwise)}
-      onDoubleClick={() => setRotate(!rotate)}
-    >
-      <mesh geometry={nodes.Suzanne.geometry} material={materials["Paars"]} />
-    </group>
+    <mesh
+      ref={suzanneRef}
+      geometry={nodes.Suzanne.geometry}
+      material={materials["Paars"]}
+    />
   );
 };
 

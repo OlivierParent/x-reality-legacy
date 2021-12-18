@@ -20,14 +20,14 @@ const Texture = () => {
     },
   });
 
-  function enableTexture(name) {
-    return useTexture === name;
+  function enableTexture(name, element) {
+    return useTexture === name ? element : null;
   }
 
   return (
     <>
-      {enableTexture(TEXTURE.Default) && <Default />}
-      {enableTexture(TEXTURE.BakedNormals) && <BakedNormals />}
+      {enableTexture(TEXTURE.Default, <Default />)}
+      {enableTexture(TEXTURE.BakedNormals, <BakedNormals />)}
     </>
   );
 };
