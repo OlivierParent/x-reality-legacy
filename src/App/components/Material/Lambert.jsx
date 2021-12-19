@@ -1,21 +1,41 @@
 import { folder, useControls } from "leva";
 
+import {
+  levaDithering,
+  levaOpacity,
+  levaSide,
+  levaTransparent,
+} from "App/libs/LevaSettings/Material";
+import {
+  levaColor,
+  levaEmissive,
+  levaEmissiveIntensity,
+  levaWireframe,
+} from "App/libs/LevaSettings/LambertMaterial";
+
 const MaterialLambert = () => {
-  const { color, opacity, transparent, wireframe } = useControls("Components", {
+  const {
+    color,
+    dithering,
+    emissive,
+    emissiveIntensity,
+    opacity,
+    side,
+    transparent,
+    wireframe,
+  } = useControls("Components", {
     Materials: folder({
       Material: folder({
-        opacity: {
-          label: "Opacity",
-          hint: "`transparent` must be `true`",
-          max: 1,
-          min: 0,
-          value: 1,
-        },
-        transparent: { label: "Transparent", value: true },
+        dithering: levaDithering,
+        opacity: levaOpacity,
+        side: levaSide,
+        transparent: levaTransparent,
       }),
       "Lambert Material": folder({
-        color: { label: "Color", value: "#ffffff" },
-        wireframe: { label: "Wireframe", value: false },
+        color: levaColor,
+        emissive: levaEmissive,
+        emissiveIntensity: levaEmissiveIntensity,
+        wireframe: levaWireframe,
       }),
     }),
   });
@@ -23,7 +43,11 @@ const MaterialLambert = () => {
   return (
     <meshLambertMaterial
       color={color}
+      dithering={dithering}
+      emissive={emissive}
+      emissiveIntensity={emissiveIntensity}
       opacity={opacity}
+      side={side}
       transparent={transparent}
       wireframe={wireframe}
     />

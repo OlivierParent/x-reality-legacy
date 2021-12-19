@@ -65,7 +65,18 @@ const Material = () => {
     Materials: folder({
       materialName: {
         label: "Material",
-        options: MATERIAL,
+        options: {
+          "Basic (Flat, no light)               ": MATERIAL.Basic,
+          "MatCap (Material Capture, no light)  ": MATERIAL.MatCap,
+          "Lambert (NPBR, Gouraud)              ": MATERIAL.Lambert,
+          "Phong (NPBR, Blinn-Phong)            ": MATERIAL.Lambert,
+          "Standard (PBR, Metallic-Roughness)   ": MATERIAL.Standard,
+          "Standard - Normal Map                ": MATERIAL.StandardNormalMap,
+          "Physical (PBR, extension of Standard)": MATERIAL.Physical,
+          "Physical - Frosted Glass             ":
+            MATERIAL.PhysicalFrostedGlass,
+          "Toon                                 ": MATERIAL.Toon,
+        },
         value: MATERIAL.Standard,
       },
     }),

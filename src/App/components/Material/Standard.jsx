@@ -1,42 +1,50 @@
 import { folder, useControls } from "leva";
 
+import {
+  levaDithering,
+  levaOpacity,
+  levaSide,
+  levaTransparent,
+} from "App/libs/LevaSettings/Material";
+import {
+  levaColor,
+  levaEmissive,
+  levaEmissiveIntensity,
+  levaFlatShading,
+  levaMetalness,
+  levaRoughness,
+  levaWireframe,
+} from "App/libs/LevaSettings/StandardMaterial";
+
 const MaterialStandard = () => {
   const {
     color,
     dithering,
     emissive,
     emissiveIntensity,
+    flatShading,
     metalness,
     opacity,
-    refractionRatio,
     roughness,
+    side,
     transparent,
     wireframe,
   } = useControls("Components", {
     Materials: folder({
       Material: folder({
-        dithering: { label: "Dithering", value: false },
-        opacity: { label: "Transparent", max: 1, min: 0, value: 1 },
-        transparent: { label: "Transparent", value: true },
+        dithering: levaDithering,
+        opacity: levaOpacity,
+        side: levaSide,
+        transparent: levaTransparent,
       }),
       "Standard Material": folder({
-        color: { label: "Color", value: "#ffffff" },
-        emissive: { label: "Emissive", value: "#000000" },
-        emissiveIntensity: {
-          label: "Emissive Intensity",
-          max: 5,
-          min: 0,
-          value: 1,
-        },
-        metalness: { label: "Metalness", max: 1, min: 0, value: 0 },
-        refractionRatio: {
-          label: "Refraction Ratio",
-          max: 2,
-          min: 0,
-          value: 0.98,
-        },
-        roughness: { label: "Roughness", max: 1, min: 0, value: 1 },
-        wireframe: { label: "Wireframe", value: false },
+        color: levaColor,
+        emissive: levaEmissive,
+        emissiveIntensity: levaEmissiveIntensity,
+        flatShading: levaFlatShading,
+        metalness: levaMetalness,
+        roughness: levaRoughness,
+        wireframe: levaWireframe,
       }),
     }),
   });
@@ -47,10 +55,11 @@ const MaterialStandard = () => {
       dithering={dithering}
       emissive={emissive}
       emissiveIntensity={emissiveIntensity}
+      flatShading={flatShading}
       metalness={metalness}
       opacity={opacity}
-      refractionRatio={refractionRatio}
       roughness={roughness}
+      side={side}
       transparent={transparent}
       wireframe={wireframe}
     />

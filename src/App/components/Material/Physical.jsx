@@ -1,5 +1,32 @@
 import { folder, useControls } from "leva";
 
+import {
+  levaDithering,
+  levaOpacity,
+  levaSide,
+  levaTransparent,
+} from "App/libs/LevaSettings/Material";
+import {
+  levaColor,
+  levaEmissive,
+  levaEmissiveIntensity,
+  levaFlatShading,
+  levaMetalness,
+  levaRoughness,
+  levaWireframe,
+} from "App/libs/LevaSettings/StandardMaterial";
+import {
+  levaClearcoat,
+  levaClearcoatRoughness,
+  levaIor,
+  levaReflectivity,
+  levaSheen,
+  levaSheenColor,
+  levaSheenRoughness,
+  levaThickness,
+  levaTransmission,
+} from "App/libs/LevaSettings/PhysicalMaterial";
+
 const MaterialPhysical = () => {
   const {
     clearcoat,
@@ -8,16 +35,16 @@ const MaterialPhysical = () => {
     dithering,
     emissive,
     emissiveIntensity,
+    flatShading,
     ior,
     metalness,
     opacity,
-    refractionRatio,
+    reflectivity,
     roughness,
     sheen,
     sheenColor,
     sheenRoughness,
-    specularColor,
-    specularIntensity,
+    side,
     thickness,
     transmission,
     transparent,
@@ -25,62 +52,30 @@ const MaterialPhysical = () => {
   } = useControls("Components", {
     Materials: folder({
       Material: folder({
-        dithering: { label: "Dithering", value: false },
-        opacity: {
-          label: "Opacity",
-          hint: "`transparent` must be `true`",
-          max: 1,
-          min: 0,
-          value: 1,
-        },
-        transparent: { label: "Transparent", value: true },
+        dithering: levaDithering,
+        opacity: levaOpacity,
+        side: levaSide,
+        transparent: levaTransparent,
       }),
       "Standard Material": folder({
-        color: { label: "Color", value: "#ffffff" },
-        emissive: { label: "Emissive", value: "#000000" },
-        emissiveIntensity: {
-          label: "Emissive Intensity",
-          max: 5,
-          min: 0,
-          value: 1,
-        },
-        metalness: { label: "Metalness", max: 1, min: 0, value: 0 },
-        refractionRatio: {
-          label: "Refraction Ratio",
-          max: 2,
-          min: 0,
-          value: 0.98,
-        },
-        roughness: { label: "Roughness", max: 1, min: 0, value: 1 },
-        wireframe: { label: "Wireframe", value: false },
+        color: levaColor,
+        emissive: levaEmissive,
+        emissiveIntensity: levaEmissiveIntensity,
+        flatShading: levaFlatShading,
+        metalness: levaMetalness,
+        roughness: levaRoughness,
+        wireframe: levaWireframe,
       }),
       "Physical Material": folder({
-        clearcoat: { label: "Clearcoat", max: 1, min: 0, value: 0 },
-        clearcoatRoughness: {
-          label: "Clearcoat Roughness",
-          max: 1,
-          min: 0,
-          value: 0,
-        },
-        ior: {
-          label: "Index of Refraction",
-          max: 2.333,
-          min: 1,
-          value: 1.5,
-        },
-        reflectivity: { label: "Reflectivity", max: 1, min: 0, value: 0.5 },
-        sheen: { label: "Sheen", max: 1, min: 0, value: 0 },
-        sheenColor: { label: "Sheen Color", value: "#ffffff" },
-        sheenRoughness: { label: "Sheen Roughness", max: 1, min: 0, value: 1 },
-        specularColor: { label: "Specular Color", value: "#ffffff" },
-        specularIntensity: {
-          label: "Specular Intensity",
-          max: 1,
-          min: 0,
-          value: 1,
-        },
-        thickness: { label: "Thickness", max: 10, min: 0, value: 0.01 },
-        transmission: { label: "Transmission", max: 1, min: 0, value: 0 },
+        clearcoat: levaClearcoat,
+        clearcoatRoughness: levaClearcoatRoughness,
+        ior: levaIor,
+        reflectivity: levaReflectivity,
+        sheen: levaSheen,
+        sheenColor: levaSheenColor,
+        sheenRoughness: levaSheenRoughness,
+        thickness: levaThickness,
+        transmission: levaTransmission,
       }),
     }),
   });
@@ -93,16 +88,16 @@ const MaterialPhysical = () => {
       dithering={dithering}
       emissive={emissive}
       emissiveIntensity={emissiveIntensity}
+      flatShading={flatShading}
       ior={ior}
       metalness={metalness}
       opacity={opacity}
-      refractionRatio={refractionRatio}
+      reflectivity={reflectivity}
       roughness={roughness}
       sheen={sheen}
       sheenColor={sheenColor}
       sheenRoughness={sheenRoughness}
-      specularColor={specularColor}
-      specularIntensity={specularIntensity}
+      side={side}
       thickness={thickness}
       transmission={transmission}
       transparent={transparent}
