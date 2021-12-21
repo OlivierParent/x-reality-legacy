@@ -1,26 +1,24 @@
 import { Dodecahedron } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
+import {
+  levaDetail,
+  levaRadius,
+} from "App/libs/LevaSettings/Geometry/Dodecahedron";
+
 import Material from "../Material";
 
+/**
+ * Dodecahedron geometry (12 faces).
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/DodecahedronGeometry
+ */
 const Geometry3DDodecahedron = ({ children }) => {
   const { detail, radius } = useControls("Components", {
     Geometry: folder({
       Arguments: folder({
-        radius: {
-          label: "Radius",
-          max: 3,
-          min: 0.1,
-          step: 0.1,
-          value: 1,
-        },
-        detail: {
-          label: "Detail",
-          max: 8,
-          min: 0,
-          step: 1,
-          value: 0,
-        },
+        radius: levaRadius,
+        detail: levaDetail,
       }),
     }),
   });

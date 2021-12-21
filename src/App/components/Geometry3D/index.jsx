@@ -70,7 +70,18 @@ const Geometry3D = ({ children }) => {
     Geometry: folder({
       geometry3DName: {
         label: "Geometry",
-        options: GEOMETRY_3D,
+        options: {
+          "Box                    ": GEOMETRY_3D.Box,
+          "Cone                   ": GEOMETRY_3D.Cone,
+          "Cylinder               ": GEOMETRY_3D.Cylinder,
+          "Tetrahedron (4 faces)  ": GEOMETRY_3D.Tetrahedron,
+          "Octahedron (8 faces)   ": GEOMETRY_3D.Octahedron,
+          "Dodecahedron (12 faces)": GEOMETRY_3D.Dodecahedron,
+          "Icosahedron (20 faces) ": GEOMETRY_3D.Icosahedron,
+          "Sphere                 ": GEOMETRY_3D.Sphere,
+          "Torus                  ": GEOMETRY_3D.Torus,
+          "Torus Knot             ": GEOMETRY_3D.TorusKnot,
+        },
         value: GEOMETRY_3D.Box,
       },
     }),

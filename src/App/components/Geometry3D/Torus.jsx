@@ -2,6 +2,14 @@ import { MathUtils } from "three";
 import { Torus } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
+import {
+  levaArc,
+  levaRadialSegments,
+  levaRadius,
+  levaTube,
+  levaTubularSegments,
+} from "App/libs/LevaSettings/Geometry/Torus";
+
 import Material from "../Material";
 
 const Geometry3DTorus = ({ children }) => {
@@ -10,41 +18,11 @@ const Geometry3DTorus = ({ children }) => {
     {
       Geometry: folder({
         Torus: folder({
-          radius: {
-            label: "Radius",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          tube: {
-            label: "Tube",
-            max: 5,
-            min: 0,
-            step: 0.1,
-            value: 0.4,
-          },
-          radialSegments: {
-            label: "Radial Segments",
-            max: 64,
-            min: 3,
-            step: 1,
-            value: 8,
-          },
-          tubularSegments: {
-            label: "Tubular Segments",
-            max: 64,
-            min: 3,
-            step: 1,
-            value: 6,
-          },
-          arc: {
-            label: "Arc",
-            max: 360,
-            min: 0,
-            step: 1,
-            value: 360,
-          },
+          radius: levaRadius,
+          tube: levaTube,
+          radialSegments: levaRadialSegments,
+          tubularSegments: levaTubularSegments,
+          arc: levaArc,
         }),
       }),
     }

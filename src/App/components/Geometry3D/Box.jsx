@@ -3,58 +3,36 @@ import { folder, useControls } from "leva";
 
 import Material from "../Material";
 
+import {
+  levaDepth,
+  levaDepthSegments,
+  levaHeight,
+  levaHeightSegments,
+  levaWidth,
+  levaWidthSegments,
+} from "App/libs/LevaSettings/Geometry/Box";
+
+/**
+ * Box geometry.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry
+ */
 const Geometry3DBox = ({ children }) => {
   const { depth, depthSegment, height, heightSegments, width, widthSegments } =
     useControls("Components", {
       Geometry: folder({
         Arguments: folder({
           "X Axis": folder({
-            width: {
-              label: "Width",
-              max: 5,
-              min: 0.1,
-              step: 0.1,
-              value: 1,
-            },
-            widthSegments: {
-              label: "Segments",
-              max: 10,
-              min: 1,
-              step: 1,
-              value: 1,
-            },
+            width: levaWidth,
+            widthSegments: levaWidthSegments,
           }),
           "Y Axis": folder({
-            height: {
-              label: "Height",
-              max: 5,
-              min: 0.1,
-              step: 0.1,
-              value: 1,
-            },
-            heightSegments: {
-              label: "Segments",
-              max: 10,
-              min: 1,
-              step: 1,
-              value: 1,
-            },
+            height: levaHeight,
+            heightSegments: levaHeightSegments,
           }),
           "Z Axis": folder({
-            depth: {
-              label: "Depth",
-              max: 5,
-              min: 0.1,
-              step: 0.1,
-              value: 1,
-            },
-            depthSegments: {
-              label: "Segments",
-              max: 10,
-              min: 1,
-              step: 1,
-              value: 1,
-            },
+            depth: levaDepth,
+            depthSegments: levaDepthSegments,
           }),
         }),
       }),

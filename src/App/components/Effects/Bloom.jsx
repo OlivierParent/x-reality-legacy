@@ -1,38 +1,29 @@
+import { Resizer, KernelSize } from "postprocessing";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
-import { BlendFunction, Resizer, KernelSize } from "postprocessing";
 import { folder, useControls } from "leva";
 
+import {
+  levaBlendFunction,
+  levaIntensity,
+  levaLuminanceSmoothing,
+  levaLuminanceThreshold,
+} from "App/libs/LevaSettings/Effects/Bloom";
+
+/**
+ * Bloom effect.
+ *
+ * @see https://docs.pmnd.rs/react-postprocessing/effects/bloom
+ * @see https://vanruesc.github.io/postprocessing/public/docs/class/src/effects/BloomEffect.js~BloomEffect.html
+ */
 const EffectsBloom = () => {
   const { blendFunction, intensity, luminanceSmoothing, luminanceThreshold } =
     useControls("General", {
-      Effects: folder({
-        Bloom: folder({
-          blendFunction: {
-            label: "Blend Function",
-            options: BlendFunction,
-            value: BlendFunction.SCREEN,
-          },
-          intensity: {
-            label: "Intensity",
-            max: 10,
-            min: 0,
-            step: 0.1,
-            value: 1,
-          },
-          luminanceSmoothing: {
-            label: "Luminance Smoothing",
-            max: 1,
-            min: 0,
-            step: 0.005,
-            value: 0.025,
-          },
-          luminanceThreshold: {
-            label: "Luminance Threshold",
-            max: 1,
-            min: 0,
-            step: 0.05,
-            value: 0.9,
-          },
+      "Effects Composer": folder({
+        "Bloom Effect": folder({
+          blendFunction: levaBlendFunction,
+          intensity: levaIntensity,
+          luminanceSmoothing: levaLuminanceSmoothing,
+          luminanceThreshold: levaLuminanceThreshold,
         }),
       }),
     });

@@ -31,8 +31,13 @@ const Suzanne = () => {
 
   return (
     <>
-      <Text fontSize={0.5} color={"white"} position={[0, 0, -1.499]}>
-        Suzanne
+      <Text
+        color={"white"}
+        fillOpacity={1}
+        fontSize={0.25}
+        position={[0, -1.85, -1.499]}
+      >
+        SUZANNE
       </Text>
       <Plane
         args={[4, 4]}

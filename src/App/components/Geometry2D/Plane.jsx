@@ -3,6 +3,18 @@ import { folder, useControls } from "leva";
 
 import Material from "../Material";
 
+import {
+  levaHeight,
+  levaHeightSegments,
+  levaWidth,
+  levaWidthSegments,
+} from "App/libs/LevaSettings/Geometry/Plane";
+
+/**
+ * Plane geometry.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/PlaneGeometry
+ */
 const Geometry2DPlane = ({ children }) => {
   const { height, heightSegments, width, widthSegments } = useControls(
     "Components",
@@ -10,36 +22,12 @@ const Geometry2DPlane = ({ children }) => {
       Geometry: folder({
         Arguments: folder({
           "X Axis": folder({
-            width: {
-              label: "Width",
-              max: 5,
-              min: 0.1,
-              step: 0.1,
-              value: 1,
-            },
-            widthSegments: {
-              label: "Segments",
-              max: 10,
-              min: 1,
-              step: 1,
-              value: 1,
-            },
+            width: levaWidth,
+            widthSegments: levaWidthSegments,
           }),
           "Y Axis": folder({
-            height: {
-              label: "Height",
-              max: 5,
-              min: 0.1,
-              step: 0.1,
-              value: 1,
-            },
-            heightSegments: {
-              label: "Segments",
-              max: 10,
-              min: 1,
-              step: 1,
-              value: 1,
-            },
+            height: levaHeight,
+            heightSegments: levaHeightSegments,
           }),
         }),
       }),

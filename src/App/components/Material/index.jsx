@@ -2,7 +2,7 @@ import { folder, useControls } from "leva";
 
 import Basic from "./Basic";
 import Lambert from "./Lambert";
-import MatCap from "./MatCap";
+import MatCap from "./Matcap";
 import Normal from "./Normal";
 import Phong from "./Phong";
 import Physical from "./Physical";
@@ -69,7 +69,7 @@ const Material = () => {
           "Basic (Flat, no light)               ": MATERIAL.Basic,
           "MatCap (Material Capture, no light)  ": MATERIAL.MatCap,
           "Lambert (NPBR, Gouraud)              ": MATERIAL.Lambert,
-          "Phong (NPBR, Blinn-Phong)            ": MATERIAL.Lambert,
+          "Phong (NPBR, Blinn-Phong)            ": MATERIAL.Phong,
           "Standard (PBR, Metallic-Roughness)   ": MATERIAL.Standard,
           "Standard - Normal Map                ": MATERIAL.StandardNormalMap,
           "Physical (PBR, extension of Standard)": MATERIAL.Physical,

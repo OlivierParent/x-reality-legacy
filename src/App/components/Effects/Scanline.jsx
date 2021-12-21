@@ -1,17 +1,23 @@
-import { BlendFunction } from "postprocessing";
 import { EffectComposer, Scanline } from "@react-three/postprocessing";
 import { folder, useControls } from "leva";
 
+import {
+  levaBlendFunction,
+  levaDensity,
+} from "App/libs/LevaSettings/Effects/Scanline";
+
+/**
+ * Scanline effect.
+ *
+ * @see https://docs.pmnd.rs/react-postprocessing/effects/scanline
+ * @see https://vanruesc.github.io/postprocessing/public/docs/class/src/effects/ScanlineEffect.js~ScanlineEffect.html
+ */
 const EffectsScanline = () => {
   const { density, blendFunction } = useControls("General", {
-    Effects: folder({
-      Scanline: folder({
-        density: { label: "density", min: 0, max: 10, step: 0.01, value: 1.25 },
-        blendFunction: {
-          label: "Blend Mode",
-          options: BlendFunction,
-          value: BlendFunction.OVERLAY,
-        },
+    "Effects Composer": folder({
+      "Scanline Effect": folder({
+        blendFunction: levaBlendFunction,
+        density: levaDensity,
       }),
     }),
   });

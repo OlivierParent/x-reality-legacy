@@ -2,32 +2,27 @@ import {
   BrightnessContrast,
   EffectComposer,
 } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import { folder, useControls } from "leva";
 
-const EffectsHueSaturation = () => {
+import {
+  levaBlendFunction,
+  levaBrightness,
+  levaContrast,
+} from "App/libs/LevaSettings/Effects/BrightnessContrast";
+
+/**
+ * Brightness/contrast effect.
+ *
+ * @see https://docs.pmnd.rs/react-postprocessing/effects/brightness-contrast
+ * @see https://vanruesc.github.io/postprocessing/public/docs/class/src/effects/BrightnessContrastEffect.js~BrightnessContrastEffect.html
+ */
+const EffectsBrightnessContrast = () => {
   const { blendFunction, brightness, contrast } = useControls("General", {
-    Effects: folder({
-      Glitch: folder({
-        blendFunction: {
-          label: "Blend Function",
-          options: BlendFunction,
-          value: BlendFunction.NORMAL,
-        },
-        brightness: {
-          label: "Brightness",
-          max: 1,
-          min: -1,
-          step: 0.001,
-          value: 0,
-        },
-        contrast: {
-          label: "Contrast",
-          max: 1,
-          min: -1,
-          step: 0.001,
-          value: 0,
-        },
+    "Effects Composer": folder({
+      "Brightness/Contrast Effect": folder({
+        blendFunction: levaBlendFunction,
+        brightness: levaBrightness,
+        contrast: levaContrast,
       }),
     }),
   });
@@ -43,4 +38,4 @@ const EffectsHueSaturation = () => {
   );
 };
 
-export default EffectsHueSaturation;
+export default EffectsBrightnessContrast;

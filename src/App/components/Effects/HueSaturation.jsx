@@ -1,31 +1,26 @@
+import { MathUtils } from "three";
 import { EffectComposer, HueSaturation } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import { folder, useControls } from "leva";
 
+import {
+  levaBlendFunction,
+  levaHue,
+  levaSaturation,
+} from "App/libs/LevaSettings/Effects/HueSaturation";
+
+/**
+ * Hue/saturation effect.
+ *
+ * @see https://docs.pmnd.rs/react-postprocessing/effects/hue-saturation
+ * @see https://vanruesc.github.io/postprocessing/public/docs/class/src/effects/HueSaturationEffect.js~HueSaturationEffect.html
+ */
 const EffectsHueSaturation = () => {
   const { blendFunction, hue, saturation } = useControls("General", {
-    Effects: folder({
-      HueSaturation: folder({
-        blendFunction: {
-          label: "Blend Function",
-          options: BlendFunction,
-          value: BlendFunction.NORMAL,
-        },
-        hue: {
-          label: "Hue",
-          hint: "In radians.",
-          max: Math.PI,
-          min: -Math.PI,
-          step: 0.001,
-          value: 0,
-        },
-        saturation: {
-          label: "Saturation",
-          max: 1,
-          min: -1,
-          step: 0.001,
-          value: 0,
-        },
+    "Effects Composer": folder({
+      "Hue/Saturation Effect": folder({
+        blendFunction: levaBlendFunction,
+        hue: levaHue,
+        saturation: levaSaturation,
       }),
     }),
   });
@@ -34,7 +29,7 @@ const EffectsHueSaturation = () => {
     <EffectComposer>
       <HueSaturation
         blendFunction={blendFunction}
-        hue={hue}
+        hue={MathUtils.degToRad(hue)}
         saturation={saturation}
       />
     </EffectComposer>

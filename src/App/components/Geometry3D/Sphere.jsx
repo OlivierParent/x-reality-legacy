@@ -2,13 +2,28 @@ import { MathUtils } from "three";
 import { Sphere } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
+import {
+  levaHeightSegments,
+  levaRadius,
+  levaWidthSegments,
+  levaΘLength,
+  levaΘStart,
+  levaΦLength,
+  levaΦStart,
+} from "App/libs/LevaSettings/Geometry/Sphere";
+
 import Material from "../Material";
 
+/**
+ * Sphere geometry.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/SphereGeometry
+ */
 const Geometry3DSphere = ({ children }) => {
   const {
+    heightSegments,
     radius,
-    sphereHeightSegments,
-    sphereWidthSegments,
+    widthSegments,
     θLength,
     θStart,
     φLength,
@@ -17,60 +32,18 @@ const Geometry3DSphere = ({ children }) => {
     Geometry: folder({
       Arguments: folder({
         "Transverse Plane": folder({
-          radius: {
-            label: "Radius",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          sphereWidthSegments: {
-            label: "Width Segments",
-            max: 64,
-            min: 3,
-            step: 1,
-            value: 32,
-          },
+          radius: levaRadius,
+          sphereWidthSegments: levaWidthSegments,
           Φ: folder({
-            φStart: {
-              label: "Φ Start",
-              max: 360,
-              min: -360,
-              step: 1,
-              value: 0,
-            },
-            φLength: {
-              label: "Φ Length",
-              max: 360,
-              min: 0,
-              step: 1,
-              value: 360,
-            },
+            φStart: levaΦStart,
+            φLength: levaΦLength,
           }),
         }),
         "Frontal Plane": folder({
-          sphereHeightSegments: {
-            label: "Height Segments",
-            max: 32,
-            min: 2,
-            step: 1,
-            value: 16,
-          },
+          heightSegments: levaHeightSegments,
           Θ: folder({
-            θStart: {
-              label: "Θ Start",
-              max: 360,
-              min: -360,
-              step: 1,
-              value: 0,
-            },
-            θLength: {
-              label: "Θ Length",
-              max: 360,
-              min: 0,
-              step: 1,
-              value: 360,
-            },
+            θStart: levaΘStart,
+            θLength: levaΘLength,
           }),
         }),
       }),
@@ -81,8 +54,8 @@ const Geometry3DSphere = ({ children }) => {
     <Sphere
       args={[
         radius,
-        sphereWidthSegments,
-        sphereHeightSegments,
+        widthSegments,
+        heightSegments,
         MathUtils.degToRad(φStart),
         MathUtils.degToRad(φLength),
         MathUtils.degToRad(θStart),

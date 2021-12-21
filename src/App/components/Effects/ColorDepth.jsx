@@ -1,23 +1,22 @@
 import { ColorDepth, EffectComposer } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import { folder, useControls } from "leva";
 
+import {
+  levaBits,
+  levaBlendFunction,
+} from "App/libs/LevaSettings/Effects/ColorDepth";
+
+/**
+ * Color depth effect.
+ *
+ * @see https://vanruesc.github.io/postprocessing/public/docs/class/src/effects/ColorDepthEffect.js~ColorDepthEffect.html
+ */
 const EffectsColorDepth = () => {
   const { bits, blendFunction } = useControls("General", {
-    Effects: folder({
-      ColorDepth: folder({
-        bits: {
-          label: "Bits",
-          max: 24,
-          min: 0,
-          step: 1,
-          value: 16,
-        },
-        blendFunction: {
-          label: "Blend Function",
-          options: BlendFunction,
-          value: BlendFunction.NORMAL,
-        },
+    "Effects Composer": folder({
+      "Color Depth Effect": folder({
+        bits: levaBits,
+        blendFunction: levaBlendFunction,
       }),
     }),
   });

@@ -14,8 +14,13 @@ import {
   levaMetalness,
   levaRoughness,
   levaWireframe,
-} from "App/libs/LevaSettings/StandardMaterial";
+} from "App/libs/LevaSettings/Material/Standard";
 
+/**
+ * A standard physically based material, using Metallic-Roughness workflow.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/materials/MeshStandardMaterial
+ */
 const MaterialStandard = () => {
   const {
     color,

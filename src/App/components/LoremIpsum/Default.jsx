@@ -1,15 +1,15 @@
 import { Text, useMatcapTexture } from "@react-three/drei";
 import { useControls } from "leva";
 
-import { FontFamily, MatCap } from "App/libs";
+import { FontFamily, Matcap } from "App/libs";
 
 const LoremIpsumDefault = () => {
   const { size, string } = useControls("Components", {
     size: {
       label: "Size",
-      value: 0.5,
+      max: 1.0,
       min: 0.1,
-      max: 1,
+      value: 0.5,
     },
     string: {
       label: "String",
@@ -18,13 +18,13 @@ const LoremIpsumDefault = () => {
   });
 
   const [matcapGreenCrystal] = useMatcapTexture(
-    MatCap.id.GREEN_CRYSTAL,
-    MatCap.size.XL
+    Matcap.id.GREEN_CRYSTAL,
+    Matcap.size.XL
   );
-  const [matcapSilvery] = useMatcapTexture(MatCap.id.SILVERY, MatCap.size.XL);
+  const [matcapSilvery] = useMatcapTexture(Matcap.id.SILVERY, Matcap.size.XL);
   const [matcapWornGold] = useMatcapTexture(
-    MatCap.id.WORN_GOLD,
-    MatCap.size.XL
+    Matcap.id.WORN_GOLD,
+    Matcap.size.XL
   );
 
   return (

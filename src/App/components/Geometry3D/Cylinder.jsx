@@ -2,8 +2,24 @@ import { MathUtils } from "three";
 import { Cylinder } from "@react-three/drei";
 import { folder, useControls } from "leva";
 
+import {
+  levaHeight,
+  levaHeightSegments,
+  levaOpenEnded,
+  levaRadialSegments,
+  levaRadiusBottom,
+  levaRadiusTop,
+  levaΘLength,
+  levaΘStart,
+} from "App/libs/LevaSettings/Geometry/Cylinder";
+
 import Material from "../Material";
 
+/**
+ * Cylinder geometry.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/CylinderGeometry
+ */
 const Geometry3DCylinder = ({ children }) => {
   const {
     height,
@@ -18,63 +34,18 @@ const Geometry3DCylinder = ({ children }) => {
     Geometry: folder({
       Arguments: folder({
         "XZ Plane": folder({
-          radiusBottom: {
-            label: "Radius Bottoms",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          radiusTop: {
-            label: "Radius Top",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          radialSegments: {
-            label: "Segments",
-            max: 64,
-            min: 3,
-            step: 1,
-            value: 8,
-          },
-          openEnded: {
-            label: "Open Ended",
-            value: false,
-          },
+          radiusBottom: levaRadiusBottom,
+          radiusTop: levaRadiusTop,
+          radialSegments: levaRadialSegments,
+          openEnded: levaOpenEnded,
           Θ: folder({
-            θStart: {
-              label: "Θ Start",
-              max: 360,
-              min: -360,
-              step: 1,
-              value: 0,
-            },
-            θLength: {
-              label: "Θ Length",
-              max: 360,
-              min: 0,
-              step: 1,
-              value: 360,
-            },
+            θStart: levaΘStart,
+            θLength: levaΘLength,
           }),
         }),
         "Y Axis": folder({
-          height: {
-            label: "Height",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          heightSegments: {
-            label: "Segments",
-            max: 8,
-            min: 1,
-            step: 1,
-            value: 1,
-          },
+          height: levaHeight,
+          heightSegments: levaHeightSegments,
         }),
       }),
     }),

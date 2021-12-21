@@ -11,8 +11,13 @@ import {
   levaEmissive,
   levaEmissiveIntensity,
   levaWireframe,
-} from "App/libs/LevaSettings/LambertMaterial";
+} from "App/libs/LevaSettings/Material/Lambert";
 
+/**
+ * A material for non-shiny surfaces, without specular highlights.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial
+ */
 const MaterialLambert = () => {
   const {
     color,

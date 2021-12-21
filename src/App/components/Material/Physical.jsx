@@ -14,7 +14,7 @@ import {
   levaMetalness,
   levaRoughness,
   levaWireframe,
-} from "App/libs/LevaSettings/StandardMaterial";
+} from "App/libs/LevaSettings/Material/Standard";
 import {
   levaClearcoat,
   levaClearcoatRoughness,
@@ -25,8 +25,13 @@ import {
   levaSheenRoughness,
   levaThickness,
   levaTransmission,
-} from "App/libs/LevaSettings/PhysicalMaterial";
+} from "App/libs/LevaSettings/Material/Physical";
 
+/**
+ * An extension of the MeshStandardMaterial, providing more advanced physically-based rendering properties.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/materials/MeshPhysicalMaterial
+ */
 const MaterialPhysical = () => {
   const {
     clearcoat,

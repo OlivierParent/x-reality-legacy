@@ -1,21 +1,46 @@
 import { folder, useControls } from "leva";
 
+import {
+  levaDithering,
+  levaOpacity,
+  levaSide,
+  levaTransparent,
+} from "App/libs/LevaSettings/Material";
+import {
+  levaColor,
+  levaReflectivity,
+  levaRefractionRatio,
+  levaWireframe,
+} from "App/libs/LevaSettings/Material/Basic";
+
+/**
+ * A material for drawing geometries in a simple shaded (flat or wireframe) way.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/materials/MeshBasicMaterial
+ */
 const MaterialBasic = () => {
-  const { color, opacity, transparent, wireframe } = useControls("Components", {
+  const {
+    color,
+    dithering,
+    opacity,
+    reflectivity,
+    refractionRatio,
+    side,
+    transparent,
+    wireframe,
+  } = useControls("Components", {
     Materials: folder({
       Material: folder({
-        opacity: {
-          label: "Opacity",
-          hint: "`transparent` must be `true`",
-          max: 1,
-          min: 0,
-          value: 1,
-        },
-        transparent: { label: "Transparent", value: true },
+        dithering: levaDithering,
+        opacity: levaOpacity,
+        side: levaSide,
+        transparent: levaTransparent,
       }),
       "Basic Material": folder({
-        color: { label: "Color", value: "#ffffff" },
-        wireframe: { label: "Wireframe", value: false },
+        color: levaColor,
+        reflectivity: levaReflectivity,
+        refractionRatio: levaRefractionRatio,
+        wireframe: levaWireframe,
       }),
     }),
   });
@@ -23,7 +48,11 @@ const MaterialBasic = () => {
   return (
     <meshBasicMaterial
       color={color}
+      dithering={dithering}
       opacity={opacity}
+      reflectivity={reflectivity}
+      refractionRatio={refractionRatio}
+      side={side}
       transparent={transparent}
       wireframe={wireframe}
     />

@@ -4,40 +4,28 @@ import { folder, useControls } from "leva";
 
 import Material from "../Material";
 
+import {
+  levaRadius,
+  levaSegments,
+  levaΘLength,
+  levaΘStart,
+} from "App/libs/LevaSettings/Geometry/Circle";
+
+/**
+ * Circle geometry.
+ *
+ * @see https://threejs.org/docs/index.html#api/en/geometries/CircleGeometry
+ */
 const Geometry2DCircle = ({ children }) => {
   const { radius, segments, θLength, θStart } = useControls("Components", {
     Geometry: folder({
       Arguments: folder({
         "XY Plane": folder({
-          radius: {
-            label: "Radius",
-            max: 3,
-            min: 0.1,
-            step: 0.1,
-            value: 1,
-          },
-          segments: {
-            label: "Segments",
-            max: 64,
-            min: 3,
-            step: 1,
-            value: 8,
-          },
+          radius: levaRadius,
+          segments: levaSegments,
           Θ: folder({
-            θStart: {
-              label: "Θ Start",
-              max: 360,
-              min: -360,
-              step: 1,
-              value: 0,
-            },
-            θLength: {
-              label: "Θ Length",
-              max: 360,
-              min: 0,
-              step: 1,
-              value: 360,
-            },
+            θStart: levaΘStart,
+            θLength: levaΘLength,
           }),
         }),
       }),
