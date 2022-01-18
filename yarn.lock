@@ -1608,6 +1608,14 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
+"@react-spring/animated@~9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@react-spring/animated/-/animated-9.4.0.tgz#35b6bed5572484b8655989791d3d224a92501839"
+  integrity sha512-hOj90pXC1ovukgA63l6zQRr7jq6Lay/kUgwlMZWOwgaZoPb1J02BjLtS0rbFvx+BUMd3mrL0QVdno+B6eYsLQQ==
+  dependencies:
+    "@react-spring/shared" "~9.4.0"
+    "@react-spring/types" "~9.4.0"
+
 "@react-spring/core@~9.3.0":
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.3.1.tgz#b98e1dca1eb4871dec75fdab350327e8a5222865"
@@ -1617,10 +1625,25 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
+"@react-spring/core@~9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@react-spring/core/-/core-9.4.0.tgz#ef4d3b9a677fd382020329693ebe3928b09c0b2e"
+  integrity sha512-zJC6JgLTv42tdNLZiN8eRgKnVaQxRvGHt329GxZFB9/bhH9FqjOMQ2GsEu8uImw3eicaXlWy10Ssp4SQftZSPg==
+  dependencies:
+    "@react-spring/animated" "~9.4.0"
+    "@react-spring/rafz" "~9.4.0"
+    "@react-spring/shared" "~9.4.0"
+    "@react-spring/types" "~9.4.0"
+
 "@react-spring/rafz@~9.3.0":
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.3.1.tgz#8dd6a598ffea487252b75d05d199e4aca5ea9d5e"
   integrity sha512-fEBMCarGVl+/2kdO+g6Zig4F+3ymwmcGN8S71gb1c7Cbbxb87kviPz8EhshfIHoiLeJPGlqwcuGbxNmZbBamvA==
+
+"@react-spring/rafz@~9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@react-spring/rafz/-/rafz-9.4.0.tgz#aa77b8961cfb8359a170d62cb6f6803f0dd84125"
+  integrity sha512-CqBLODaAZ9HrTNZyOtrr4XQ7CdUNd4OU3Hh7T6JSdB88MyJScsJBKCT9QaJop6wuhvQPiQEviMnD8TfKEkVfuw==
 
 "@react-spring/shared@~9.3.0":
   version "9.3.1"
@@ -1629,6 +1652,14 @@
   dependencies:
     "@react-spring/rafz" "~9.3.0"
     "@react-spring/types" "~9.3.0"
+
+"@react-spring/shared@~9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@react-spring/shared/-/shared-9.4.0.tgz#d83824c0362298f8e047913bb309e0dae10ef520"
+  integrity sha512-VgQd8NxfbLTeWqzKpGMXXVf1IrmBKO8/fsHFiW+OxZdmFpz77G1aJZ+AnMgCcwrV9KtLdeG0G8YXOQrhsLA7dA==
+  dependencies:
+    "@react-spring/rafz" "~9.4.0"
+    "@react-spring/types" "~9.4.0"
 
 "@react-spring/three@^9.3.1":
   version "9.3.1"
@@ -1640,23 +1671,38 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
+"@react-spring/three@^9.4.2":
+  version "9.4.2"
+  resolved "https://registry.yarnpkg.com/@react-spring/three/-/three-9.4.2.tgz#a39b4f816023ea7792cacf74188f09de8fa13604"
+  integrity sha512-qAPHOMjQjl9V3Eh4Xbdsdx9mAMe+rtSBfEuZGfoF5l8P8zC42gxggbyM1sKUOip3yyz76YTPiosWkmvgCVxMng==
+  dependencies:
+    "@react-spring/animated" "~9.4.0"
+    "@react-spring/core" "~9.4.0"
+    "@react-spring/shared" "~9.4.0"
+    "@react-spring/types" "~9.4.0"
+
 "@react-spring/types@~9.3.0":
   version "9.3.1"
   resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.3.1.tgz#20f392ecad15a1ea6c0865ffe86ca5016c05a278"
   integrity sha512-W/YMJMX35XgGGzX0gKORBTwnvQ+1loDOFN3XlZkW5fgpEY+7VkRUpPyqPWXQr3n6lHrsLmHIGdpznqZi54ACTQ==
 
-"@react-three/cannon@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@react-three/cannon/-/cannon-4.3.0.tgz#a31fca0c63efdef2253819ea6807720de0151fb3"
-  integrity sha512-U0ne4JcwxhdsOVmgGW9qhsl8wHWJxyVsUsGaLyFDujjl4YvG4uGkYAfwrifmmXhTRHkCh+HzE0Dhjq+ms3CwFQ==
+"@react-spring/types@~9.4.0":
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.4.0.tgz#fca70dc588b4dfaadac9f881bdcdf25c5dc23ac5"
+  integrity sha512-K49Fb/rPX6cSb15ZcW6d45NBYqAJbGh4MKpsBmvZWahJTXKtFDfQq10Bq0+wlLYQr8r1bgsE8v4blfCIdm6UoA==
+
+"@react-three/cannon@^4.6.0":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@react-three/cannon/-/cannon-4.6.0.tgz#b88b9a6973574067fb2d3863d6085f5e41d1518a"
+  integrity sha512-GSLXDGezk3F7fXQCLZYukkdRAec43Sbv+F5QV1a8Q0wJFMp+68ON+BHbceaKSxJTk8OeoGe9mR9FXJztc1LaAg==
   dependencies:
     cannon-es "^0.18.0"
-    cannon-es-debugger "^0.1.4"
+    cannon-es-debugger "^1.0.0"
 
-"@react-three/drei@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.3.1.tgz#df5b83c602e82994970613697e94811490161488"
-  integrity sha512-i+O6AkBqpsdJTRx4Zy12X9E7lSFf0J/7oIH207WrkHcBPz4EGBpY2tXkpxN6Ux7QuPgOQI9KSrmT0bPtsdyXJA==
+"@react-three/drei@^8.4.0":
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.4.0.tgz#71cdca97ca9ee7afd5674faac217ea7f63cf4c71"
+  integrity sha512-62JVfUgKzxZjgcSPhGcP2fedUUPco+N2JsKc7toLaACjwYnS5fhQNKwYLw92Agr4C/eBxPrmQSQL2F3LmLv0Eg==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/three" "^9.3.1"
@@ -1698,13 +1744,14 @@
   dependencies:
     yoga-layout-prebuilt "^1.9.6"
 
-"@react-three/postprocessing@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.0.5.tgz#9c30e14e0766f9ceee33740682a9fcdd2cfe785a"
-  integrity sha512-0o4NjYXpqfbW03fpB2WuWA2FApoafwvqhDI2Ca1Weljbo3d/Uy3XUBB8WyZU3zWIAQbg7SzU/d03wpFSGzWzJQ==
+"@react-three/postprocessing@^2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@react-three/postprocessing/-/postprocessing-2.1.2.tgz#c8979cb1892b72696605cb241ec95fd706b3c450"
+  integrity sha512-VU0lh0wMXI77cYN/JeV/D7nK8Bztv+pFAilZnr2TnK82/lL5CeDmjHkvfVquCM/2uMh6d58vx5IK8WZTmlR1vQ==
   dependencies:
-    postprocessing "^6.22.2"
+    postprocessing "^6.23.3"
     react-merge-refs "^1.1.0"
+    three-stdlib "^2.6.2"
 
 "@react-three/test-renderer@^7.0.23":
   version "7.0.23"
@@ -3441,10 +3488,10 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, can
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001287.tgz#5fab6a46ab9e47146d5dd35abfe47beaf8073c71"
   integrity sha512-4udbs9bc0hfNrcje++AxBuc6PfLNHwh3PO9kbwnfCQWyqtlzg3py0YgFu8jyRTTo85VAz4U+VLxSlID09vNtWA==
 
-cannon-es-debugger@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/cannon-es-debugger/-/cannon-es-debugger-0.1.4.tgz#22c79ae14c52de44465690988ff647c51c79c62b"
-  integrity sha512-RefSPWX6gDMQsx3UWoQpkGW3R03Wwn8p1JteexQUYxDC5DnOS3U3iKhns2vVpFp6Q3AKiSSmRf7NIXnGN8L0RA==
+cannon-es-debugger@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/cannon-es-debugger/-/cannon-es-debugger-1.0.0.tgz#28c6679b30dcf608e978225239f447a8fe55ccb4"
+  integrity sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g==
 
 cannon-es@^0.18.0:
   version "0.18.0"
@@ -9220,7 +9267,7 @@ postcss@^8.1.0:
     picocolors "^1.0.0"
     source-map-js "^1.0.1"
 
-postprocessing@^6.22.2:
+postprocessing@^6.23.3:
   version "6.23.3"
   resolved "https://registry.yarnpkg.com/postprocessing/-/postprocessing-6.23.3.tgz#82766829d9c4bac184fceb0467c375a980dacc72"
   integrity sha512-T/XCi+lsB1HWBen89wpumZJyxNX5LplyGATU2CPtSsJHr1Vz0lrzxKOAkuSUPZab13v4dB2ra5wUl+fpvwdLpA==
@@ -10424,10 +10471,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-socket.io-client@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.4.0.tgz#d6568ebd79ac12e2d6b628e7e90e60f1d48d99ff"
-  integrity sha512-g7riSEJXi7qCFImPow98oT8X++MSsHz6MMFRXkWNJ6uEROSHOa3kxdrsYWMq85dO+09CFMkcqlpjvbVXQl4z6g==
+socket.io-client@^4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.4.1.tgz#b6aa9448149d09b8d0b2bbf3d2fac310631fdec9"
+  integrity sha512-N5C/L5fLNha5Ojd7Yeb/puKcPWWcoB/A09fEjjNsg91EDVr5twk/OEyO6VT9dlLSUNY85NpW6KBhVMvaLKQ3vQ==
   dependencies:
     "@socket.io/component-emitter" "~3.0.0"
     backo2 "~1.0.2"
@@ -11037,7 +11084,24 @@ three-mesh-bvh@^0.5.2:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.2.tgz#6d435330e4aa686dcdbf70330c8eb5dd42b12737"
   integrity sha512-DAKWujkp8xpSBqGiIsZbZC1utxAbYBg0SShQk9LdOG/xWWl1/OLK76eXDGfov47trl3L7PUTHi0hhRvZdVro1Q==
 
-three-stdlib@2.6.1, three-stdlib@^2.6.1:
+three-stdlib@2.6.4:
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.6.4.tgz#9c6b125da875c4c0c995fe0fc7b956ba33407ba7"
+  integrity sha512-vc+/op2LYGnSN4y2QhxyyFm6WvdLQ/M0vpPxT0anB40lpA3t5+B9R9so/X53BOP8SiENG5YKVNQGXhqwTJJHGw==
+  dependencies:
+    "@babel/runtime" "^7.14.6"
+    "@webgpu/glslang" "^0.0.15"
+    "@webxr-input-profiles/motion-controllers" "^1.0.0"
+    chevrotain "^9.0.2"
+    draco3d "^1.4.1"
+    fflate "^0.6.9"
+    ktx-parse "^0.2.1"
+    mmd-parser "^1.0.4"
+    opentype.js "^1.3.3"
+    potpack "^1.0.1"
+    zstddec "^0.0.2"
+
+three-stdlib@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.6.1.tgz#905834f7ea00ebeb8a8927a462f65d710d1ba2cb"
   integrity sha512-6GulvDfTnJ8KmJmhwrKnLWAepRysb+9mH6fiDGQnZVai9O1Pg/Gr8pYKOX3+GD9VVxyGqhsEbApcsRmRJaIsCQ==
@@ -11054,7 +11118,24 @@ three-stdlib@2.6.1, three-stdlib@^2.6.1:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three@^0.135.0:
+three-stdlib@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.6.2.tgz#9fb4e26a1feeded87d2d068ab075a97e14ef94a4"
+  integrity sha512-xkgRswTTWlsxMfSmafXztUNwwdIQuZ28AG8PAp+PI0BHHY5ssgTDdb2PIwFimznEoYa012HcnhAa0vhUoBc1/Q==
+  dependencies:
+    "@babel/runtime" "^7.14.6"
+    "@webgpu/glslang" "^0.0.15"
+    "@webxr-input-profiles/motion-controllers" "^1.0.0"
+    chevrotain "^9.0.2"
+    draco3d "^1.4.1"
+    fflate "^0.6.9"
+    ktx-parse "^0.2.1"
+    mmd-parser "^1.0.4"
+    opentype.js "^1.3.3"
+    potpack "^1.0.1"
+    zstddec "^0.0.2"
+
+three@0.135:
   version "0.135.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.135.0.tgz#cff4ec8edd3c51ce9bc7e88d13e8eafed4d0ddfc"
   integrity sha512-kuEpuuxRzLv0MDsXai9huCxOSQPZ4vje6y0gn80SRmQvgz6/+rI0NAvCRAw56zYaWKMGMfqKWsxF9Qa2Z9xymQ==
@@ -11603,10 +11684,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-web-vitals@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.2.tgz#3a6c8faebf9097a6ccd17f5f45c9485d8d62dab1"
-  integrity sha512-nZnEH8dj+vJFqCRYdvYv0a59iLXsb8jJkt+xvXfwgnkyPdsSLtKNlYmtTDiHmTNGXeSXtpjTTUcNvFtrAk6VMQ==
+web-vitals@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-2.1.3.tgz#6dca59f41dbc3fcccdb889da06191b437b18f534"
+  integrity sha512-+ijpniAzcnQicXaXIN0/eHQAiV/jMt1oHGHTmz7VdAJPPkzzDhmoYPSpLgJTuFtUh+jCjxCoeTZPg7Ic+g8o7w==
 
 webgl-constants@^1.1.1:
   version "1.1.1"
