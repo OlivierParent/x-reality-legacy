@@ -14,7 +14,7 @@ import {
   Button,
   Clock,
   Cube,
-  Effects,
+  // Effects,
   Composition,
   Face,
   Gauge,
@@ -113,7 +113,7 @@ const Content = () => {
   return (
     <>
       {enableStats && <Stats />}
-      <Effects />
+      {/* <Effects /> */}
       <Helpers />
       <InputControls />
       <Lighting />

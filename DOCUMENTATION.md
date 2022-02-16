@@ -14,6 +14,8 @@
   - [Documentation](https://docs.pmnd.rs/drei)
   - [GitHub](https://github.com/pmndrs/drei)
   - [Storybook](https://drei.pmnd.rs/)
+- Lamina
+  - [GitHub](https://github.com/pmndrs/lamina)
 - Leva
   - [GitHub](https://github.com/pmndrs/leva)
   - [Storybook](https://leva.pmnd.rs/)
@@ -21,6 +23,10 @@
   - [Documentation](https://docs.pmnd.rs/react-postprocessing)
   - [GitHub](https://github.com/pmndrs/react-postprocessing)
   - [Post Processing](https://vanruesc.github.io/postprocessing/public/docs/)
+  - Issues:
+    Effects component disabled until react-postprocessing is fixed for newer Three.js.
+    - https://github.com/pmndrs/three-stdlib/pull/108
+    - https://github.com/pmndrs/react-postprocessing/issues/109
 - [React Spring](https://react-spring.io/)
   - [Documentation](https://docs.pmnd.rs/react-spring)
   - [GitHub](https://github.com/pmndrs/react-spring)

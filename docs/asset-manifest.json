@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/x-reality/static/css/main.36a7e8b9.chunk.css",
-    "main.js": "/x-reality/static/js/main.17203c0e.chunk.js",
-    "main.js.map": "/x-reality/static/js/main.17203c0e.chunk.js.map",
-    "runtime-main.js": "/x-reality/static/js/runtime-main.edc43d19.js",
-    "runtime-main.js.map": "/x-reality/static/js/runtime-main.edc43d19.js.map",
-    "static/js/2.de8722e9.chunk.js": "/x-reality/static/js/2.de8722e9.chunk.js",
-    "static/js/2.de8722e9.chunk.js.map": "/x-reality/static/js/2.de8722e9.chunk.js.map",
-    "static/js/3.fd2ddd10.chunk.js": "/x-reality/static/js/3.fd2ddd10.chunk.js",
-    "static/js/3.fd2ddd10.chunk.js.map": "/x-reality/static/js/3.fd2ddd10.chunk.js.map",
+    "main.js": "/x-reality/static/js/main.23c854e3.chunk.js",
+    "main.js.map": "/x-reality/static/js/main.23c854e3.chunk.js.map",
+    "runtime-main.js": "/x-reality/static/js/runtime-main.15c1b4ea.js",
+    "runtime-main.js.map": "/x-reality/static/js/runtime-main.15c1b4ea.js.map",
+    "static/js/2.8fb4955b.chunk.js": "/x-reality/static/js/2.8fb4955b.chunk.js",
+    "static/js/2.8fb4955b.chunk.js.map": "/x-reality/static/js/2.8fb4955b.chunk.js.map",
+    "static/js/3.f1f0aa0d.chunk.js": "/x-reality/static/js/3.f1f0aa0d.chunk.js",
+    "static/js/3.f1f0aa0d.chunk.js.map": "/x-reality/static/js/3.f1f0aa0d.chunk.js.map",
     "index.html": "/x-reality/index.html",
     "static/css/main.36a7e8b9.chunk.css.map": "/x-reality/static/css/main.36a7e8b9.chunk.css.map",
-    "static/js/2.de8722e9.chunk.js.LICENSE.txt": "/x-reality/static/js/2.de8722e9.chunk.js.LICENSE.txt",
+    "static/js/2.8fb4955b.chunk.js.LICENSE.txt": "/x-reality/static/js/2.8fb4955b.chunk.js.LICENSE.txt",
     "static/media/Arteveldehogeschool_favicon.209a12d1.png": "/x-reality/static/media/Arteveldehogeschool_favicon.209a12d1.png",
     "static/media/BakedNormals.03580610.glb": "/x-reality/static/media/BakedNormals.03580610.glb",
-    "static/media/SVG_logo.e87754b4.svg": "/x-reality/static/media/SVG_logo.e87754b4.svg",
+    "static/media/SVG_logo.31892e95.svg": "/x-reality/static/media/SVG_logo.31892e95.svg",
     "static/media/TexturedCube.2b78eebc.glb": "/x-reality/static/media/TexturedCube.2b78eebc.glb",
     "static/media/UV_Grid_Sm.8ab40f71.jpg": "/x-reality/static/media/UV_Grid_Sm.8ab40f71.jpg",
     "static/media/animation.07175b80.glb": "/x-reality/static/media/animation.07175b80.glb",
@@ -25,9 +25,9 @@
     "static/media/suzanne.f8d5e374.glb": "/x-reality/static/media/suzanne.f8d5e374.glb"
   },
   "entrypoints": [
-    "static/js/runtime-main.edc43d19.js",
-    "static/js/2.de8722e9.chunk.js",
+    "static/js/runtime-main.15c1b4ea.js",
+    "static/js/2.8fb4955b.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
-    "static/js/main.17203c0e.chunk.js"
+    "static/js/main.23c854e3.chunk.js"
   ]
 }

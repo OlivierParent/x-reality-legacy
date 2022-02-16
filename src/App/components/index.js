@@ -4,7 +4,7 @@ export { default as Button } from "./Button";
 export { default as Clock } from "./Clock";
 export { default as Composition } from "./Composition";
 export { default as Cube } from "./Cube";
-export { default as Effects } from "./Effects";
+// export { default as Effects } from "./Effects";
 export { default as Face } from "./Face";
 export { default as Gauge } from "./Gauge";
 export { default as Geometry2D } from "./Geometry2D";
