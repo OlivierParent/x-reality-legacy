@@ -33,7 +33,7 @@ function enableMaterial(name) {
     case MATERIAL.Lambert:
       element = <Lambert />;
       break;
-    case MATERIAL.MatCap:
+    case MATERIAL.Matcap:
       element = <Matcap />;
       break;
     case MATERIAL.Normal:
