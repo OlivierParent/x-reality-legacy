@@ -2,7 +2,7 @@ import { folder, useControls } from "leva";
 
 import Basic from "./Basic";
 import Lambert from "./Lambert";
-import MatCap from "./Matcap";
+import Matcap from "./Matcap";
 import Normal from "./Normal";
 import Phong from "./Phong";
 import Physical from "./Physical";
@@ -14,7 +14,7 @@ import Toon from "./Toon";
 const MATERIAL = Object.freeze({
   Basic: "Basic",
   Lambert: "Lambert",
-  MatCap: "MatCap",
+  Matcap: "Matcap",
   Normal: "Normal",
   Phong: "Phong",
   Physical: "Physical",
@@ -34,7 +34,7 @@ function enableMaterial(name) {
       element = <Lambert />;
       break;
     case MATERIAL.MatCap:
-      element = <MatCap />;
+      element = <Matcap />;
       break;
     case MATERIAL.Normal:
       element = <Normal />;
@@ -67,7 +67,7 @@ const Material = () => {
         label: "Material",
         options: {
           "Basic (Flat, no light)               ": MATERIAL.Basic,
-          "MatCap (Material Capture, no light)  ": MATERIAL.MatCap,
+          "Matcap (Material Capture, no light)  ": MATERIAL.Matcap,
           "Lambert (NPBR, Gouraud)              ": MATERIAL.Lambert,
           "Phong (NPBR, Blinn-Phong)            ": MATERIAL.Phong,
           "Standard (PBR, Metallic-Roughness)   ": MATERIAL.Standard,
