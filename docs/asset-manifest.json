@@ -5,13 +5,13 @@
     "main.js.map": "/x-reality/static/js/main.6e7a7f90.chunk.js.map",
     "runtime-main.js": "/x-reality/static/js/runtime-main.fe1ca8ba.js",
     "runtime-main.js.map": "/x-reality/static/js/runtime-main.fe1ca8ba.js.map",
-    "static/js/2.528fde1c.chunk.js": "/x-reality/static/js/2.528fde1c.chunk.js",
-    "static/js/2.528fde1c.chunk.js.map": "/x-reality/static/js/2.528fde1c.chunk.js.map",
+    "static/js/2.0bb9fe32.chunk.js": "/x-reality/static/js/2.0bb9fe32.chunk.js",
+    "static/js/2.0bb9fe32.chunk.js.map": "/x-reality/static/js/2.0bb9fe32.chunk.js.map",
     "static/js/3.994cf769.chunk.js": "/x-reality/static/js/3.994cf769.chunk.js",
     "static/js/3.994cf769.chunk.js.map": "/x-reality/static/js/3.994cf769.chunk.js.map",
     "index.html": "/x-reality/index.html",
     "static/css/main.36a7e8b9.chunk.css.map": "/x-reality/static/css/main.36a7e8b9.chunk.css.map",
-    "static/js/2.528fde1c.chunk.js.LICENSE.txt": "/x-reality/static/js/2.528fde1c.chunk.js.LICENSE.txt",
+    "static/js/2.0bb9fe32.chunk.js.LICENSE.txt": "/x-reality/static/js/2.0bb9fe32.chunk.js.LICENSE.txt",
     "static/media/Arteveldehogeschool_favicon.209a12d1.png": "/x-reality/static/media/Arteveldehogeschool_favicon.209a12d1.png",
     "static/media/BakedNormals.03580610.glb": "/x-reality/static/media/BakedNormals.03580610.glb",
     "static/media/SVG_logo.31892e95.svg": "/x-reality/static/media/SVG_logo.31892e95.svg",
@@ -26,7 +26,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.fe1ca8ba.js",
-    "static/js/2.528fde1c.chunk.js",
+    "static/js/2.0bb9fe32.chunk.js",
     "static/css/main.36a7e8b9.chunk.css",
     "static/js/main.6e7a7f90.chunk.js"
   ]
