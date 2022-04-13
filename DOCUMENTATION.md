@@ -23,10 +23,6 @@
   - [Documentation](https://docs.pmnd.rs/react-postprocessing)
   - [GitHub](https://github.com/pmndrs/react-postprocessing)
   - [Post Processing](https://vanruesc.github.io/postprocessing/public/docs/)
-  - Issues:
-    Effects component disabled until react-postprocessing is fixed for newer Three.js.
-    - https://github.com/pmndrs/three-stdlib/pull/108
-    - https://github.com/pmndrs/react-postprocessing/issues/109
 - [React Spring](https://react-spring.io/)
   - [Documentation](https://docs.pmnd.rs/react-spring)
   - [GitHub](https://github.com/pmndrs/react-spring)
@@ -45,6 +41,7 @@
       $ yarn add @react-three/postprocessing
       $ yarn add @react-three/test-renderer
       $ yarn add d3-ease
+      $ yarn add lamina
       $ yarn add leva
       $ yarn add react-router-dom
       $ yarn add react-spring

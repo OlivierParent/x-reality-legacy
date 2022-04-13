@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.b234a844.css","mappings":"AAAA,iBAGE,YAAa,CACb,WACF,CAEA,KACE,qBAAuB,CACvB,QACF","sources":["App/index.css"],"sourcesContent":["html,\nbody,\ncanvas {\n  height: 100vh;\n  width: 100vw;\n}\n\nbody {\n  background-color: black;\n  margin: 0;\n}\n"],"names":[],"sourceRoot":""}
