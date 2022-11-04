@@ -1,7 +1,7 @@
 export { ROUTES } from "./ReactRouter/ROUTES";
 export { default as Animation } from "./Animation";
 export { default as Button } from "./Button";
-export { default as Clock } from "./Clock";
+export { Clock } from "./Clock";
 export { default as Composition } from "./Composition";
 export { default as Cube } from "./Cube";
 export { default as Effects } from "./Effects";

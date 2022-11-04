@@ -3,17 +3,19 @@ import { useTexture } from "@react-three/drei";
 
 import uvGrid from "./assets/UV_Grid_Sm.jpg";
 
-const ImageDefault = () => {
-  const texture = useTexture(uvGrid, true);
+const ImageDefault = (props) => {
+  const texture = useTexture(uvGrid);
   texture.offset = new Vector2(0, 0);
   texture.repeat = new Vector2(1, 1);
 
   return (
-    <mesh>
-      <planeGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial center map={texture} side={DoubleSide} />
-    </mesh>
+    <group {...props}>
+      <mesh>
+        <planeGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial center={true} map={texture} side={DoubleSide} />
+      </mesh>
+    </group>
   );
 };
 
-export default ImageDefault;
+export { ImageDefault };

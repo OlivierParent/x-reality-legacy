@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/x-reality/static/css/main.b234a844.css",
-    "main.js": "/x-reality/static/js/main.49c322a0.js",
-    "static/js/787.004065aa.chunk.js": "/x-reality/static/js/787.004065aa.chunk.js",
-    "static/media/bensound-evolution.mp3": "/x-reality/static/media/bensound-evolution.4375aef0bb0aa53f542e.mp3",
-    "static/media/BakedNormals.glb": "/x-reality/static/media/BakedNormals.03580610c404bbe4bf6b.glb",
-    "static/media/TexturedCube.glb": "/x-reality/static/media/TexturedCube.2b78eebcca182be3ab54.glb",
-    "static/media/UV_Grid_Sm.jpg": "/x-reality/static/media/UV_Grid_Sm.8ab40f718b980383b313.jpg",
-    "static/media/gltf-logo.glb": "/x-reality/static/media/gltf-logo.d3501fc256ec9ddbd19c.glb",
-    "static/media/suzanne.glb": "/x-reality/static/media/suzanne.f8d5e374969875c114e3.glb",
-    "static/media/Arteveldehogeschool_favicon.png": "/x-reality/static/media/Arteveldehogeschool_favicon.209a12d12e07efdfbbdd.png",
-    "static/media/animation.glb": "/x-reality/static/media/animation.07175b802826a7629a99.glb",
-    "static/media/SVG_logo.svg": "/x-reality/static/media/SVG_logo.31892e959789b5a423bae1652f2e6dd9.svg",
-    "static/media/arteveldehogeschool_logo.svg": "/x-reality/static/media/arteveldehogeschool_logo.6220cd577fb250a0bcf4d9b4211e8449.svg",
-    "static/media/normals.glb": "/x-reality/static/media/normals.c5aed970e245557969de.glb",
-    "index.html": "/x-reality/index.html",
-    "main.b234a844.css.map": "/x-reality/static/css/main.b234a844.css.map",
-    "main.49c322a0.js.map": "/x-reality/static/js/main.49c322a0.js.map",
-    "787.004065aa.chunk.js.map": "/x-reality/static/js/787.004065aa.chunk.js.map"
+    "main.css": "/x-reality-legacy/static/css/main.b234a844.css",
+    "main.js": "/x-reality-legacy/static/js/main.ab933ff2.js",
+    "static/js/496.8f0922b1.chunk.js": "/x-reality-legacy/static/js/496.8f0922b1.chunk.js",
+    "static/media/bensound-evolution.mp3": "/x-reality-legacy/static/media/bensound-evolution.4375aef0bb0aa53f542e.mp3",
+    "static/media/BakedNormals.glb": "/x-reality-legacy/static/media/BakedNormals.03580610c404bbe4bf6b.glb",
+    "static/media/TexturedCube.glb": "/x-reality-legacy/static/media/TexturedCube.2b78eebcca182be3ab54.glb",
+    "static/media/UV_Grid_Sm.jpg": "/x-reality-legacy/static/media/UV_Grid_Sm.8ab40f718b980383b313.jpg",
+    "static/media/gltf-logo.glb": "/x-reality-legacy/static/media/gltf-logo.d3501fc256ec9ddbd19c.glb",
+    "static/media/suzanne.glb": "/x-reality-legacy/static/media/suzanne.f8d5e374969875c114e3.glb",
+    "static/media/Arteveldehogeschool_favicon.png": "/x-reality-legacy/static/media/Arteveldehogeschool_favicon.209a12d12e07efdfbbdd.png",
+    "static/media/animation.glb": "/x-reality-legacy/static/media/animation.07175b802826a7629a99.glb",
+    "static/media/SVG_logo.svg": "/x-reality-legacy/static/media/SVG_logo.31892e959789b5a423bae1652f2e6dd9.svg",
+    "static/media/arteveldehogeschool_logo.svg": "/x-reality-legacy/static/media/arteveldehogeschool_logo.6220cd577fb250a0bcf4d9b4211e8449.svg",
+    "static/media/normals.glb": "/x-reality-legacy/static/media/normals.c5aed970e245557969de.glb",
+    "index.html": "/x-reality-legacy/index.html",
+    "main.b234a844.css.map": "/x-reality-legacy/static/css/main.b234a844.css.map",
+    "main.ab933ff2.js.map": "/x-reality-legacy/static/js/main.ab933ff2.js.map",
+    "496.8f0922b1.chunk.js.map": "/x-reality-legacy/static/js/496.8f0922b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b234a844.css",
-    "static/js/main.49c322a0.js"
+    "static/js/main.ab933ff2.js"
   ]
 }

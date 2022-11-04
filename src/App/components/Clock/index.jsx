@@ -1,7 +1,7 @@
 import { useControls } from "leva";
 
-import Analogue from "./Analogue";
-import Digital from "./Digital";
+import { ClockAnalogue as Analogue } from "./Analogue";
+import { ClockDigital as Digital } from "./Digital";
 
 const CLOCK = Object.freeze({
   Analogue: "Analogue",
@@ -29,4 +29,4 @@ const Clock = () => {
   );
 };
 
-export default Clock;
+export { Clock };

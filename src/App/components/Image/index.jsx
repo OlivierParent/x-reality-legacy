@@ -1,11 +1,13 @@
 import { useControls } from "leva";
 
-import Default from "./Default";
-import Svg from "./Svg";
+import { ImageDefault as Default } from "./Default";
+import { ImageSvgCustom as SvgCustom } from "./SvgCustom";
+import { ImageSvgDrei as SvgDrei } from "./SvgDrei";
 
 const IMAGE = Object.freeze({
   Default: "Default",
-  Svg: "Svg",
+  Svg: "SvgDrei",
+  SvgCustom: "SvgCustom",
 });
 
 const Image = () => {
@@ -24,7 +26,8 @@ const Image = () => {
   return (
     <>
       {enableImage(IMAGE.Default, <Default />)}
-      {enableImage(IMAGE.Svg, <Svg />)}
+      {enableImage(IMAGE.Svg, <SvgCustom />)}
+      {enableImage(IMAGE.SvgCustom, <SvgDrei />)}
     </>
   );
 };

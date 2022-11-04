@@ -1,3 +1,5 @@
+import { Stats } from "@react-three/drei";
+import { useControls } from "leva";
 import { Suspense } from "react";
 import {
   HashRouter as Router,
@@ -6,16 +8,14 @@ import {
   Routes,
 } from "react-router-dom";
 import { MathUtils } from "three";
-import { Stats } from "@react-three/drei";
-import { useControls } from "leva";
 
 import {
   Animation,
   Button,
   Clock,
+  Composition,
   Cube,
   Effects,
-  Composition,
   Face,
   Gauge,
   Geometry2D,
@@ -32,13 +32,13 @@ import {
   ReactRouter,
   ReactRouterPathAlpha,
   ReactRouterPathOmega,
+  ROUTES,
   Socket,
   Spring,
   Suzanne,
   Texture,
   Tripod,
   World,
-  ROUTES,
 } from "./components";
 
 const COMPONENT = Object.freeze({
@@ -69,42 +69,52 @@ const COMPONENT = Object.freeze({
 });
 
 const Content = () => {
-  const { enableStats } = useControls("General", {
-    enableStats: { label: "Stats", value: false },
-  });
-
-  const { useComponent } = useControls("Components", {
-    useComponent: {
-      label: "Component",
-      options: {
-        "None                  ": COMPONENT.None,
-        "Animation             ": COMPONENT.Animation,
-        "Button                ": COMPONENT.Button,
-        "Clock                 ": COMPONENT.Clock,
-        "Composition           ": COMPONENT.Composition,
-        "Cube                  ": COMPONENT.Cube,
-        "Cube (positioned)     ": COMPONENT.Cube_Positioned,
-        "Face                  ": COMPONENT.Face,
-        "Gauge                 ": COMPONENT.Gauge,
-        "Geometry 2D           ": COMPONENT.Geometry2D,
-        "Geometry 3D           ": COMPONENT.Geometry3D,
-        "Image                 ": COMPONENT.Image,
-        "Logo                  ": COMPONENT.Logo,
-        "Lorem Ipsum           ": COMPONENT.LoremIpsum,
-        "Normals               ": COMPONENT.Normals,
-        "Particles             ": COMPONENT.Particles,
-        "Planes                ": COMPONENT.Planes,
-        "ReactRouter           ": COMPONENT.ReactRouter,
-        "Socket (Socket.IO 4.4)": COMPONENT.Socket,
-        "Spring                ": COMPONENT.Spring,
-        "Suzanne               ": COMPONENT.Suzanne,
-        "Texture               ": COMPONENT.Texture,
-        "Tripod                ": COMPONENT.Tripod,
-        "World                 ": COMPONENT.World,
-      },
-      value: COMPONENT.Suzanne,
+  const { enableStats } = useControls(
+    "General",
+    {
+      enableStats: { label: "Stats", value: false },
     },
-  });
+    { collapsed: true }
+  );
+
+  const { useComponent } = useControls(
+    "Components",
+    {
+      useComponent: {
+        label: "Component",
+        options: {
+          "None                  ": COMPONENT.None,
+          "Animation             ": COMPONENT.Animation,
+          "Button                ": COMPONENT.Button,
+          "Clock                 ": COMPONENT.Clock,
+          "Composition           ": COMPONENT.Composition,
+          "Cube                  ": COMPONENT.Cube,
+          "Cube (positioned)     ": COMPONENT.Cube_Positioned,
+          "Face                  ": COMPONENT.Face,
+          "Gauge                 ": COMPONENT.Gauge,
+          "Geometry 2D           ": COMPONENT.Geometry2D,
+          "Geometry 3D           ": COMPONENT.Geometry3D,
+          "Image                 ": COMPONENT.Image,
+          "Logo                  ": COMPONENT.Logo,
+          "Lorem Ipsum           ": COMPONENT.LoremIpsum,
+          "Normals               ": COMPONENT.Normals,
+          "Particles             ": COMPONENT.Particles,
+          "Planes                ": COMPONENT.Planes,
+          "ReactRouter           ": COMPONENT.ReactRouter,
+          "Socket (Socket.IO 4.4)": COMPONENT.Socket,
+          "Spring                ": COMPONENT.Spring,
+          "Suzanne               ": COMPONENT.Suzanne,
+          "Texture               ": COMPONENT.Texture,
+          "Tripod                ": COMPONENT.Tripod,
+          "World                 ": COMPONENT.World,
+        },
+        value: COMPONENT.Suzanne,
+      },
+    },
+    { collapsed: true }
+  );
+
+  useControls("Lightings", {}, { collapsed: true });
 
   function enableComponent(name, element) {
     return useComponent === name ? element : null;

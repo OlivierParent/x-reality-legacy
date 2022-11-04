@@ -1,5 +1,12 @@
 # Documentation
 
+ ## Issues
+
+> On build errors, try removing `yarn.lock` and `node_modules`, and install packages again.
+
+<!-- - Failed to compile. Attempted import error: 'ParametricGeometry' is not exported from 'three' (imported as 'ParametricGeometry').
+  - Fix: `yarn add three@0.143.0` -->
+
 ## Technologies
 
 - [Three.js](https://threejs.org/)
@@ -19,6 +26,8 @@
 - Leva
   - [GitHub](https://github.com/pmndrs/leva)
   - [Storybook](https://leva.pmnd.rs/)
+- [Rapier](https://react-three-rapier.pmnd.rs/)
+  - [GitHub](https://github.com/pmndrs/react-three-rapier)
 - React Postprocessing
   - [Documentation](https://docs.pmnd.rs/react-postprocessing)
   - [GitHub](https://github.com/pmndrs/react-postprocessing)
@@ -39,6 +48,7 @@
       $ yarn add @react-three/fiber
       $ yarn add @react-three/flex
       $ yarn add @react-three/postprocessing
+      $ yarn add @react-three/rapier
       $ yarn add @react-three/test-renderer
       $ yarn add d3-ease
       $ yarn add lamina
